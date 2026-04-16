@@ -1,3 +1,4 @@
+
 [![Meshery Academy](https://img.shields.io/badge/Meshery-Academy-00B39F?style=flat-square&logo=meshery&logoColor=white)](https://cloud.meshery.io/academy)
 
 ![Meshery-Logo](.github/assets/images/meshery-logo-dark-text-side.svg)
