@@ -19,7 +19,7 @@ TCS Labs Academy is the official learning-content repository for TCS Labs on the
 | **Platform** | Runs on the shared [Layer5 Academy](https://cloud.meshery.io/academy) platform |
 | **Authoring** | Markdown-based content with live local preview via Hugo |
 | **Content types** | Learning paths · Challenges · Certifications · Infrastructure designs |
-| **Org ID** | `3e2f9c82-1a4c-4781-adf9-99ec22cd994e` |
+| **Org ID** | `deea6061-b6be-49a9-ad1c-f1a5c32e1fa9` |
 
 ---
 
@@ -121,7 +121,7 @@ The Academy content follows this structure: **Learning Path → Course → Chapt
 content/
 └── learning-paths/
     ├── _index.md
-    └── 3e2f9c82-1a4c-4781-adf9-99ec22cd994e/   # TCS Labs org UID
+    └── deea6061-b6be-49a9-ad1c-f1a5c32e1fa9/   # TCS Labs org UID
         └── <your-learning-path>/
             ├── _index.md
             └── <your-course>/
@@ -135,7 +135,7 @@ content/
 
 Use the `usestatic` shortcode (not standard Markdown image links) for tenant-aware asset paths:
 
-1. Place your image in `static/3e2f9c82-1a4c-4781-adf9-99ec22cd994e/images/`
+1. Place your image in `static/deea6061-b6be-49a9-ad1c-f1a5c32e1fa9/images/`
 2. Reference it in your lesson:
    ```text
    ![Alt text]({{< usestatic path="images/your-image.png" >}})

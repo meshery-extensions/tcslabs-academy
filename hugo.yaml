@@ -1,7 +1,12 @@
 baseURL: http://localhost:9876/academy/
-title: Example Academy
+title: TCS Labs Academy
 canonifyurls: true
 ignoreLogs: ['warning-goldmark-raw-html']
+
+params:
+  # Organization UUID for TCS Labs — scopes tenant content and static assets
+  # (used by the academy-theme `usestatic` shortcode).
+  defined_org: deea6061-b6be-49a9-ad1c-f1a5c32e1fa9
 
 markup:
   goldmark:
