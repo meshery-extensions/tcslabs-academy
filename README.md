@@ -229,6 +229,7 @@ We welcome contributions! Please follow the **fork → branch → commit → pus
 |---|---|
 | [meshery/meshery](https://github.com/meshery/meshery) | Meshery core project |
 | [meshery-extensions/meshery-academy](https://github.com/meshery-extensions/meshery-academy) | Meshery Academy content |
+| [meshery-extensions/ditigalocean-academy](https://github.com/meshery-extensions/ditigalocean-academy) | This repository (upstream) |
 | [meshery-extensions/tcslabs-academy](https://github.com/meshery-extensions/tcslabs-academy) | This repository (upstream) |
 | [layer5io/academy-theme](https://github.com/layer5io/academy-theme) | Academy Hugo theme — styles, shortcodes, layouts |
 | [layer5io/academy-build](https://github.com/layer5io/academy-build) | Build pipeline that aggregates academies for publishing |
