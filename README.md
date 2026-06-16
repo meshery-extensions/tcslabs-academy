@@ -2,11 +2,11 @@
 
 ![Meshery-Logo](.github/assets/images/meshery-logo-dark-text-side.svg)
 
-# DigitalOcean Academy
+# TCS Labs Academy
 
-DigitalOcean Academy is the official learning-content repository for DigitalOcean on the [Meshery Academy](https://cloud.meshery.io/academy) platform. It hosts structured learning paths, challenges, certifications, and Meshery infrastructure designs — helping engineers learn how to manage cloud-native infrastructure with Meshery on DigitalOcean.
+TCS Labs Academy is the official learning-content repository for TCS Labs on the [Meshery Academy](https://cloud.meshery.io/academy) platform. It hosts structured learning paths, challenges, certifications, and Meshery infrastructure designs — helping engineers learn how to manage cloud-native infrastructure with Meshery on TCS Labs.
 
-🔗 **Live site:** <https://digitalocean.layer5.io/academy>
+<!-- 🔗 **Live site:** <https://platform.tata-consulting.co.uk/academy> -->
 
 ---
 
@@ -14,7 +14,7 @@ DigitalOcean Academy is the official learning-content repository for DigitalOcea
 
 | | |
 |---|---|
-| **Purpose** | Primary source of DigitalOcean-specific Meshery learning content |
+| **Purpose** | Primary source of TCS Labs-specific Meshery learning content |
 | **Platform** | Runs on the shared [Layer5 Academy](https://cloud.meshery.io/academy) platform |
 | **Authoring** | Markdown-based content with live local preview via Hugo |
 | **Content types** | Learning paths · Challenges · Certifications · Infrastructure designs |
@@ -120,7 +120,7 @@ The Academy content follows this structure: **Learning Path → Course → Chapt
 content/
 └── learning-paths/
     ├── _index.md
-    └── 3e2f9c82-1a4c-4781-adf9-99ec22cd994e/   # DigitalOcean org UID
+    └── 3e2f9c82-1a4c-4781-adf9-99ec22cd994e/   # TCS Labs org UID
         └── <your-learning-path>/
             ├── _index.md
             └── <your-course>/
@@ -167,7 +167,7 @@ timeLimit: 30
 numberOfQuestions: 1
 questions:
   - id: "q1"
-    text: "DigitalOcean Academy content is authored in Markdown."
+    text: "TCS Labs Academy content is authored in Markdown."
     type: "true-false"
     marks: 1
     options:
