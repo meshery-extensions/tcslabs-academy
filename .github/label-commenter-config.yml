@@ -34,10 +34,10 @@ labels:
   - name: component/ui
     labeled:
       issue:
-        body: This issue has been labeled with 'component/ui'. 🧰 Here are docs on [Contributing to Meshery UI](https://docs.meshery.io/project/contributing/contributing-ui). 🎨 Here is the [Meshery UI Figma File](https://www.figma.com/file/SMP3zxOjZztdOLtgN4dS2W/Meshery-UI?node-id=4%3A0) File. Lastly, here are docs on [Contributing to Meshery's End-to-End Tests](https://docs.meshery.io/project/contributing/contributing-ui-tests).
+        body: This issue has been labeled with 'component/ui'. 🧰 Here are docs on [Contributing to Meshery UI](https://docs.meshery.io/project/contributing/contributing-ui). 🎨 Here is the [Meshery UI Figma File](https://www.figma.com/file/SMP3zxOjZztdOLtgN4dS2W/Meshery-UI?node-id=4%3A0) File. Lastly, here are docs on [Contributing to Meshery's End-to-End Tests Using Cypress](https://docs.meshery.io/project/contributing/contributing-cypress).
         action: open
       pr:
-        body: This PR has been labeled with 'component/ui'. 🧰 Here are docs on [Contributing to Meshery UI](https://docs.meshery.io/project/contributing/contributing-ui). 🎨 Here is the [Meshery UI Figma File](https://www.figma.com/file/SMP3zxOjZztdOLtgN4dS2W/Meshery-UI?node-id=4%3A0) File. Lastly, here are docs on [Contributing to Meshery's End-to-End Tests](https://docs.meshery.io/project/contributing/contributing-ui-tests).
+        body: This PR has been labeled with 'component/ui'. 🧰 Here are docs on [Contributing to Meshery UI](https://docs.meshery.io/project/contributing/contributing-ui). 🎨 Here is the [Meshery UI Figma File](https://www.figma.com/file/SMP3zxOjZztdOLtgN4dS2W/Meshery-UI?node-id=4%3A0) File. Lastly, here are docs on [Contributing to Meshery's End-to-End Tests Using Cypress](https://docs.meshery.io/project/contributing/contributing-cypress)
         action: open
   - name: component/mesheryctl
     labeled:
@@ -47,13 +47,14 @@ labels:
       pr:
         body: This PR has been labeled with 'component/mesheryctl'. Note that after making changes you need to update it in the [mesheryctl command tracker](https://docs.google.com/spreadsheets/d/1q63sIGAuCnIeDs8PeM-0BAkNj8BBgPUXhLbe1Y-318o/edit#gid=0) spreadsheet.
         action: open
-      # pr:
-      #   body: Hi, please note that this issue will need an approved design specification before implementation proceeds. See [Creating a Functional Specification](https://docs.google.com/document/d/1RP3IWLc-MiQS-QYasqCoVuCH7--G87p5ezE5f_nOzB8/edit?usp=sharing) to create a design spec.
-      #   action: open
-  - name: issue/docs-needed
+  - name: issue/welcome
     labeled:
-      pr:
-        body: This PR has been labeled with 'issue/docs-needed'. It looks like this PR might need an update to the Meshery Docs. Please ensure the documentation is updated accordingly. Here are docs on [Contributing to Meshery Docs](https://docs.meshery.io/project/contributing/contributing-docs).
+      issue:
+        body: Thanks for opening this issue. A contributor will be by to give feedback soon. In the meantime, please review the [Layer5 Contributors' Welcome Guide](https://docs.google.com/document/d/17OPtDE_rdnPQxmk2Kauhm3GwXF1R5dZ3Cj8qZLKdo5E/edit?usp=sharing) and sure to join the [community Slack](https://slack.layer5.io/).
         action: open
-
+      pr:
+        body: >
+          <p align="center">Thank you for contributing to the Layer5 community! :tada: </p> 
+          <p align="center"><img src="https://raw.githubusercontent.com/meshery/meshery/refs/heads/master/.github/assets/images/Meshery-celebration-Dark.svg" width="80%" /></p><br />
+        action: open
 
