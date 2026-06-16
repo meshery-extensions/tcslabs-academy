@@ -31,10 +31,10 @@ Before you begin, ensure you have the following installed:
 
 | Tool | Version | Link |
 |------|---------|------|
-| **Hugo** (extended) | ≥ 0.156.0 | [Install Hugo](https://gohugo.io/getting-started/installing/) |
-| **Go** | ≥ 1.24 | [Install Go](https://go.dev/doc/install) |
-| **Node.js / npm** | LTS | [Install Node.js](https://nodejs.org/) |
-| **Git** | Latest | [Install Git](https://git-scm.com/) |
+| **Hugo** (extended) | see go.mod| [Install Hugo](https://gohugo.io/getting-started/installing/) |
+| **Go** | see go.mod | [Install Go](https://go.dev/doc/install) |
+| **Node.js / npm** | see package.json | [Install Node.js](https://nodejs.org/) |
+| **Git** | latest | [Install Git](https://git-scm.com/) |
 
 ---
 
@@ -51,21 +51,21 @@ cd tcslabs-academy
 ### 2. Install Dependencies
 
 ```bash
-npm install
+make setup
 ```
 
 ### 3. Run the Site Locally
 
-Start the Hugo development server with drafts and future content enabled:
-
-```bash
-hugo server -D
-```
-
-Or use the Makefile target (includes draft **and** future content):
+_Preferred:_ Start the Hugo development server with drafts and future content enabled, using the Makefile target:
 
 ```bash
 make site
+```
+
+_Alternative: _ Or use the hugo CLI directly (at your own risk):
+
+```bash
+hugo server -D
 ```
 
 The site will be available at `http://localhost:1313/academy/` (or the port shown in your terminal).
@@ -78,6 +78,7 @@ The site will be available at `http://localhost:1313/academy/` (or the port show
 |---------|-------------|
 | `make setup` | Install npm dependencies |
 | `make build` | Build the site for production |
+| `make site`  | Build and run site locally with draft and future content enabled |
 | `make clean` | Clear build cache and restart the dev server |
 | `make theme-update` | Update the `academy-theme` Hugo module to the latest version |
 
@@ -133,26 +134,49 @@ content/
                     └── lesson-2.md
 ```
 
-### Adding Images
 
-Use the `usestatic` shortcode (not standard Markdown image links) for tenant-aware asset paths:
+### How to Add an Image
 
-1. Place your image in `static/deea6061-b6be-49a9-ad1c-f1a5c32e1fa9/images/`
-2. Reference it in your lesson:
-   ```text
-   ![Alt text]({{< usestatic path="images/your-image.png" >}})
-   ```
+1. Place your image files directly in the same directory as your markdown content (Page Bundling method):
 
-### Adding Videos
+```shell
+content/learning-paths/<orgID>/
+└── your-course/
+    └── your-module/
+        ├── _index.md
+        └── meshery-logo.png
+```
 
-```text
-{{< card title="Video: Example" >}}
+### How to Add a Video
+
+Embed videos in a visually distinct card using:
+
+```markdown
+{{</*card title="Video: Example" */>}}
 <video width="100%" height="100%" controls>
-    <source src="https://example.com/video.mp4" type="video/mp4">
+    <source src="https://example.com/your-video.mp4" type="video/mp4">
     Your browser does not support the video tag.
 </video>
-{{< /card >}}
+{{</* /card*/>}}
 ```
+
+### How to Add a Meshery Design
+
+1. Place Design Assets Put your design files (e.g., `cdn.js`, design YAMLs) alongside your course or module content, ideally following the same directory conventions used for images.
+
+2. Embed Using the meshery-design-embed Shortcode In your markdown file, use:
+
+```bash
+{{< meshery-design-embed
+id="embedded-design-0e3abb9c-39e7-4d09-b46f-26a0238c3c3d"
+src="cdn.js"
+>}}
+```
+
+- Replace `id` with the unique identifier for your design.
+- Replace `src` with the path to your JS asset responsible for rendering.
+
+> Always use these shortcodes for images, videos, and embedded designs. This keeps assets portable, ensures they resolve correctly for each organization, and integrates properly with the Academy platform’s build and deployment flow.
 
 ### Adding Assessments
 
@@ -170,7 +194,7 @@ timeLimit: 30
 numberOfQuestions: 1
 questions:
   - id: "q1"
-    text: "TCS Labs Academy content is authored in Markdown."
+    text: "DigitalOcean Academy content is authored in Markdown."
     type: "true-false"
     marks: 1
     options:
