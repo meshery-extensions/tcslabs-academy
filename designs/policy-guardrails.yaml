@@ -1,0 +1,88 @@
+# TCS Labs Academy — Policy & guardrails
+#
+# A set of governance objects used in the Policy-as-Code and governance lessons. Applied to a
+# workload namespace, these bound resource usage, set sane container defaults, restrict network
+# traffic to same-namespace by default, and protect availability during disruptions.
+#
+# Import into Meshery:
+#   mesheryctl design import -f designs/policy-guardrails.yaml -s "Kubernetes Manifest"
+# ...or apply directly:
+#   kubectl apply -f designs/policy-guardrails.yaml
+#
+# Pair this with designs/microservices-demo.yaml: apply the demo app, then apply these guardrails
+# (adjusting the namespace) and use Meshery's relationship/policy validation to see the effect.
+---
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: tcslabs-guardrails
+  labels:
+    app.kubernetes.io/part-of: tcslabs-academy
+    academy.tcslabs/design: policy-guardrails
+---
+apiVersion: v1
+kind: ResourceQuota
+metadata:
+  name: compute-quota
+  namespace: tcslabs-guardrails
+spec:
+  hard:
+    requests.cpu: "2"
+    requests.memory: 2Gi
+    limits.cpu: "4"
+    limits.memory: 4Gi
+    pods: "20"
+---
+apiVersion: v1
+kind: LimitRange
+metadata:
+  name: container-defaults
+  namespace: tcslabs-guardrails
+spec:
+  limits:
+    - type: Container
+      default:
+        cpu: 250m
+        memory: 256Mi
+      defaultRequest:
+        cpu: 50m
+        memory: 64Mi
+      max:
+        cpu: "1"
+        memory: 1Gi
+---
+# Default-deny all ingress in the namespace...
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: default-deny-ingress
+  namespace: tcslabs-guardrails
+spec:
+  podSelector: {}
+  policyTypes:
+    - Ingress
+---
+# ...then allow traffic only from pods within the same namespace.
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: allow-same-namespace
+  namespace: tcslabs-guardrails
+spec:
+  podSelector: {}
+  policyTypes:
+    - Ingress
+  ingress:
+    - from:
+        - podSelector: {}
+---
+apiVersion: policy/v1
+kind: PodDisruptionBudget
+metadata:
+  name: academy-pdb
+  namespace: tcslabs-guardrails
+spec:
+  minAvailable: 1
+  selector:
+    matchLabels:
+      app.kubernetes.io/part-of: tcslabs-academy

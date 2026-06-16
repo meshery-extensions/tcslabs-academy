@@ -1,0 +1,173 @@
+# TCS Labs Academy — LLM / MCP gateway
+#
+# An OpenAI-compatible inference service (Ollama) fronted by a lightweight gateway. Used by the
+# AI-infrastructure and Model Context Protocol lessons as the "model endpoint" that agents call.
+#
+# Import into Meshery:
+#   mesheryctl design import -f designs/llm-mcp-gateway.yaml -s "Kubernetes Manifest"
+# ...or apply directly:
+#   kubectl apply -f designs/llm-mcp-gateway.yaml
+#
+# NOTES:
+# - Ollama runs CPU-only by default. To use a GPU node pool, add a nodeSelector/tolerations and a
+#   `resources.limits: nvidia.com/gpu: 1` entry, and pull a larger model.
+# - The "gateway" here is an nginx reverse proxy standing in for an MCP/inference gateway. Replace
+#   the gateway image with your MCP server image when you build one in Learning Path 5.
+---
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: tcslabs-ai
+  labels:
+    app.kubernetes.io/part-of: tcslabs-academy
+    academy.tcslabs/design: llm-mcp-gateway
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ollama
+  namespace: tcslabs-ai
+  labels:
+    app: ollama
+    app.kubernetes.io/part-of: tcslabs-academy
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: ollama
+  template:
+    metadata:
+      labels:
+        app: ollama
+    spec:
+      containers:
+        - name: ollama
+          image: ollama/ollama:0.3.12
+          ports:
+            - name: http
+              containerPort: 11434
+          env:
+            - name: OLLAMA_HOST
+              value: "0.0.0.0"
+          volumeMounts:
+            - name: models
+              mountPath: /root/.ollama
+          readinessProbe:
+            httpGet:
+              path: /
+              port: http
+            initialDelaySeconds: 10
+            periodSeconds: 15
+          resources:
+            requests:
+              cpu: 500m
+              memory: 1Gi
+            limits:
+              cpu: "2"
+              memory: 4Gi
+      volumes:
+        - name: models
+          emptyDir: {}
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: ollama
+  namespace: tcslabs-ai
+  labels:
+    app: ollama
+spec:
+  selector:
+    app: ollama
+  ports:
+    - name: http
+      port: 11434
+      targetPort: 11434
+  type: ClusterIP
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: gateway-config
+  namespace: tcslabs-ai
+  labels:
+    app.kubernetes.io/part-of: tcslabs-academy
+data:
+  default.conf: |
+    server {
+      listen 8080;
+      # Health endpoint for the gateway itself.
+      location /healthz { return 200 'ok'; add_header Content-Type text/plain; }
+      # Proxy OpenAI-compatible inference traffic to the model server.
+      location /v1/ {
+        proxy_pass http://ollama:11434/v1/;
+        proxy_set_header Host $host;
+        proxy_read_timeout 300s;
+      }
+      location /api/ {
+        proxy_pass http://ollama:11434/api/;
+        proxy_set_header Host $host;
+        proxy_read_timeout 300s;
+      }
+    }
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: mcp-gateway
+  namespace: tcslabs-ai
+  labels:
+    app: mcp-gateway
+    app.kubernetes.io/part-of: tcslabs-academy
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: mcp-gateway
+  template:
+    metadata:
+      labels:
+        app: mcp-gateway
+    spec:
+      containers:
+        - name: gateway
+          image: nginxinc/nginx-unprivileged:1.27-alpine
+          ports:
+            - name: http
+              containerPort: 8080
+          volumeMounts:
+            - name: config
+              mountPath: /etc/nginx/conf.d
+          readinessProbe:
+            httpGet:
+              path: /healthz
+              port: http
+            initialDelaySeconds: 5
+            periodSeconds: 10
+          resources:
+            requests:
+              cpu: 25m
+              memory: 32Mi
+            limits:
+              cpu: 100m
+              memory: 64Mi
+      volumes:
+        - name: config
+          configMap:
+            name: gateway-config
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: mcp-gateway
+  namespace: tcslabs-ai
+  labels:
+    app: mcp-gateway
+spec:
+  selector:
+    app: mcp-gateway
+  ports:
+    - name: http
+      port: 80
+      targetPort: 8080
+  type: ClusterIP
