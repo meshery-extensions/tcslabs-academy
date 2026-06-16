@@ -4,7 +4,9 @@
 
 # TCS Labs Academy
 
-TCS Labs Academy is the official learning-content repository for TCS Labs on the [Meshery Academy](https://cloud.meshery.io/academy) platform. It hosts structured learning paths, challenges, certifications, and Meshery infrastructure designs — helping engineers learn how to manage cloud-native infrastructure with Meshery on TCS Labs.
+TCS Labs Academy is the official learning-content repository for TCS Labs on the [Meshery Academy](https://cloud.meshery.io/academy) platform. It hosts structured learning paths, challenges, certifications, and Meshery infrastructure designs - teaching engineers to **use LLMs and coding agents to design, deploy, operate, and govern cloud native infrastructure**, with [Meshery](https://meshery.io/) as the management plane.
+
+> 🗺️ **Start with the [Curriculum Master Outline](./CURRICULUM.md)** - the complete map of learning paths, courses, the tiered AI certification (CAINA + CAINP), challenges, and importable designs.
 
 <!-- 🔗 **Live site:** <https://platform.tata-consulting.co.uk/academy> -->
 
@@ -18,7 +20,8 @@ TCS Labs Academy is the official learning-content repository for TCS Labs on the
 | **Platform** | Runs on the shared [Layer5 Academy](https://cloud.meshery.io/academy) platform |
 | **Authoring** | Markdown-based content with live local preview via Hugo |
 | **Content types** | Learning paths · Challenges · Certifications · Infrastructure designs |
-| **Org ID** | `3e2f9c82-1a4c-4781-adf9-99ec22cd994e` |
+| **Curriculum** | 6 learning paths, tiered AI certification (CAINA + CAINP) - see [CURRICULUM.md](./CURRICULUM.md) |
+| **Org ID** | `deea6061-b6be-49a9-ad1c-f1a5c32e1fa9` |
 
 ---
 
@@ -120,7 +123,7 @@ The Academy content follows this structure: **Learning Path → Course → Chapt
 content/
 └── learning-paths/
     ├── _index.md
-    └── 3e2f9c82-1a4c-4781-adf9-99ec22cd994e/   # TCS Labs org UID
+    └── deea6061-b6be-49a9-ad1c-f1a5c32e1fa9/   # TCS Labs org UID
         └── <your-learning-path>/
             ├── _index.md
             └── <your-course>/
@@ -134,7 +137,7 @@ content/
 
 Use the `usestatic` shortcode (not standard Markdown image links) for tenant-aware asset paths:
 
-1. Place your image in `static/3e2f9c82-1a4c-4781-adf9-99ec22cd994e/images/`
+1. Place your image in `static/deea6061-b6be-49a9-ad1c-f1a5c32e1fa9/images/`
 2. Reference it in your lesson:
    ```text
    ![Alt text]({{< usestatic path="images/your-image.png" >}})
@@ -229,9 +232,9 @@ We welcome contributions! Please follow the **fork → branch → commit → pus
 |---|---|
 | [meshery/meshery](https://github.com/meshery/meshery) | Meshery core project |
 | [meshery-extensions/meshery-academy](https://github.com/meshery-extensions/meshery-academy) | Meshery Academy content |
-| [meshery-extensions/ditigalocean-academy](https://github.com/meshery-extensions/ditigalocean-academy) | This repository (upstream) |
 | [meshery-extensions/tcslabs-academy](https://github.com/meshery-extensions/tcslabs-academy) | This repository (upstream) |
-| [layer5io/academy-theme](https://github.com/layer5io/academy-theme) | Academy Hugo theme — styles, shortcodes, layouts |
+| [layer5io/digitalocean-academy](https://github.com/layer5io/digitalocean-academy) | Sibling AI-focused academy (structural reference) |
+| [layer5io/academy-theme](https://github.com/layer5io/academy-theme) | Academy Hugo theme - styles, shortcodes, layouts |
 | [layer5io/academy-build](https://github.com/layer5io/academy-build) | Build pipeline that aggregates academies for publishing |
 
 ---
