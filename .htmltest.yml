@@ -6,7 +6,7 @@ DirectoryPath: "public"
 
 CheckInternal: true
 CheckExternal: true       # skipped at runtime by -s; left true for when you drop -s
-EnforceHTTPS: true        # still flags real http:// links to fix
+EnforceHTTPS: true        # still flags real http:// links (e.g. exoscale.com) to fix
 
 # --- Silence intentional or non-blocking findings ---
 
@@ -22,7 +22,7 @@ IgnoreAltMissing: true
 
 # Deliberate example URLs in workshop content (intentionally http, not real
 # reachable hosts). These skip HTTPS enforcement; genuine http links elsewhere
-# are NOT listed here, so they still surface for fixing.
+# (exoscale.com, etc.) are NOT listed here, so they still surface for fixing.
 IgnoreHTTPS:
   - '^http://localhost'
   - 'votingapp\.(com|cc)'

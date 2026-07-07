@@ -7,6 +7,7 @@
   "author": "TCS Labs Academy Authors",
   "license": "Apache-2.0",
   "bugs": "https://github.com/meshery-extensions/tcslabs-academy/issues",
+  "private": true,
   "spelling": "cSpell:ignore docsy hugo htmltest precheck postbuild rtlcss meshery kanvas mesheryctl -",
   "scripts": {
     "_hugo": "hugo --cleanDestinationDir",
@@ -14,8 +15,7 @@
     "_build": "npm run _hugo-dev",
     "_site": "npm run _hugo-dev -- --minify server",
     "_check:links": "echo \"Skipped: go run github.com/wjdp/htmltest@${HTMLTEST_VERSION:-latest} -s\"",
-    "_local": "npx cross-env HUGO_MODULE_WORKSPACE=docsy.work",
-    "_serve": "npm run _hugo-dev -- --minify serve --renderToMemory",
+    "_local": "npx cross-env HUGO_MODULE_WORKSPACE=exoscale-academy.work",
     "build": "npm run _build",
     "build:preview": "npm run _hugo-dev -- --minify --baseURL \"${DEPLOY_PRIME_URL:-/}\"",
     "build:production": "npm run _hugo -- --minify --gc",
@@ -25,7 +25,6 @@
     "make:public": "git init -b main public",
     "local": "npm run _local -- npm run",
     "check:links": "npm run _check:links",
-    "check:links:all": "HTMLTEST_ARGS= npm run _check:links",
     "precheck:links": "npm run build",
     "postbuild:preview": "npm run _check:links",
     "postbuild:production": "npm run _check:links",
@@ -38,19 +37,17 @@
     "update:theme": "hugo mod get github.com/layer5io/academy-theme"
   },
   "devDependencies": {
-    "autoprefixer": "^10.5.0",
+    "autoprefixer": "^10.4.27",
     "cross-env": "^7.0.3",
     "hugo-extended": "0.158.0",
-    "postcss": "^8.5.15",
+    "postcss": "^8.5.12",
     "postcss-cli": "^11.0.1",
     "prettier": "3.8.3",
-    "rtlcss": "^4.3.0",
-    "sass": "^1.98.0"
+    "rtlcss": "^4.3.0"
   },
   "optionalDependencies": {
     "npm-check-updates": "^18.0.1"
   },
-  "private": true,
   "prettier": {
     "proseWrap": "always",
     "singleQuote": true
