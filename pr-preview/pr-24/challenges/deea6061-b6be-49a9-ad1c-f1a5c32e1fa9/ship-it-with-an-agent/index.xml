@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Ship It with an Agent on TCS Labs Academy</title><link>https://meshery-extensions.github.io/tcslabs-academy/pr-preview/pr-24/challenges/deea6061-b6be-49a9-ad1c-f1a5c32e1fa9/ship-it-with-an-agent/</link><description>Recent content in Ship It with an Agent on TCS Labs Academy</description><generator>Hugo</generator><language>en</language><atom:link href="https://meshery-extensions.github.io/tcslabs-academy/pr-preview/pr-24/challenges/deea6061-b6be-49a9-ad1c-f1a5c32e1fa9/ship-it-with-an-agent/index.xml" rel="self" type="application/rss+xml"/><item><title>Ship It with an Agent</title><link>https://meshery-extensions.github.io/tcslabs-academy/pr-preview/pr-24/challenges/deea6061-b6be-49a9-ad1c-f1a5c32e1fa9/ship-it-with-an-agent/lab/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://meshery-extensions.github.io/tcslabs-academy/pr-preview/pr-24/challenges/deea6061-b6be-49a9-ad1c-f1a5c32e1fa9/ship-it-with-an-agent/lab/</guid><description>&lt;h2 id="introduction" class="heading-link"&gt;
+ Introduction
+ &lt;a href="#introduction" class="heading-anchor" aria-label="Permalink to this heading"&gt;🔗&lt;/a&gt;
+&lt;/h2&gt;
+&lt;p&gt;In this challenge you will deploy a small microservices application using a coding agent and
+&lt;a href="https://meshery.io/"&gt;Meshery&lt;/a&gt;. It is the warm-up for the
+&lt;a href="https://cloud.meshery.io/academy/certifications/deea6061-b6be-49a9-ad1c-f1a5c32e1fa9/certified-ai-native-infrastructure-associate/"&gt;CAINA&lt;/a&gt;
+credential: a complete, low-risk run through the design-to-deploy loop.&lt;/p&gt;
+
+&lt;h2 id="prerequisites" class="heading-link"&gt;
+ Prerequisites
+ &lt;a href="#prerequisites" class="heading-anchor" aria-label="Permalink to this heading"&gt;🔗&lt;/a&gt;
+&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;A Kubernetes cluster (kind, k3d, minikube, or managed) with &lt;code&gt;kubectl&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://docs.meshery.io/"&gt;Meshery&lt;/a&gt; running (&lt;code&gt;mesheryctl system start&lt;/code&gt;) and connected.&lt;/li&gt;
+&lt;li&gt;A coding agent with shell access.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id="step-1---import-the-design" class="heading-link"&gt;
+ Step 1 - Import the design
+ &lt;a href="#step-1---import-the-design" class="heading-anchor" aria-label="Permalink to this heading"&gt;🔗&lt;/a&gt;
+&lt;/h2&gt;
+&lt;p&gt;Use the academy&amp;rsquo;s microservices demo design:&lt;/p&gt;</description></item><item><title>Ship It with an Agent - Exam</title><link>https://meshery-extensions.github.io/tcslabs-academy/pr-preview/pr-24/challenges/deea6061-b6be-49a9-ad1c-f1a5c32e1fa9/ship-it-with-an-agent/exam/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://meshery-extensions.github.io/tcslabs-academy/pr-preview/pr-24/challenges/deea6061-b6be-49a9-ad1c-f1a5c32e1fa9/ship-it-with-an-agent/exam/</guid><description/></item></channel></rss>
