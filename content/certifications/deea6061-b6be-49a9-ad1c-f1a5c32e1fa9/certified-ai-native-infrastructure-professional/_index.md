@@ -2,7 +2,7 @@
 type: "certification"
 title: "Certified AI-Native Infrastructure Professional (CAINP)"
 description: "Prove you can run cloud native infrastructure with coding agents in production - agentic day-2 operations, Model Context Protocol integrations with Meshery, safe automation, and governance. The professional-level credential of the TCS Labs Academy."
-id: "bfb2045e-5bb0-4821-94c4-bdf04d2a3500"
+id: "303d4cc4-6523-41e7-8c4d-784af813f0bc"
 banner: "banner.svg"
 weight: 2
 level: "advanced"
