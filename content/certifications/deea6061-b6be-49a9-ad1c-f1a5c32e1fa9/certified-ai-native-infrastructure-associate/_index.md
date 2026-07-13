@@ -53,11 +53,11 @@ prerequisite_knowledge:
   - title: "Learning Paths"
     children:
       - title: "Foundations of Cloud Native Management with Meshery"
-        link: "https://cloud.meshery.io/academy/learning-paths/25d5053d-9be3-4af2-98dc-fcc3cf1cc4e1/foundations-of-cloud-native-management-with-meshery/"
+        link: "https://platform.tata-consulting.co.uk/academy/learning-paths/25d5053d-9be3-4af2-98dc-fcc3cf1cc4e1/foundations-of-cloud-native-management-with-meshery/"
       - title: "AI Engineering Foundations for Platform Engineers"
-        link: "https://cloud.meshery.io/academy/learning-paths/25d5053d-9be3-4af2-98dc-fcc3cf1cc4e1/ai-engineering-foundations-for-platform-engineers/"
+        link: "https://platform.tata-consulting.co.uk/academy/learning-paths/25d5053d-9be3-4af2-98dc-fcc3cf1cc4e1/ai-engineering-foundations-for-platform-engineers/"
       - title: "AI-Assisted Infrastructure Design with Meshery & Kanvas"
-        link: "https://cloud.meshery.io/academy/learning-paths/25d5053d-9be3-4af2-98dc-fcc3cf1cc4e1/ai-assisted-infrastructure-design-with-meshery-and-kanvas/"
+        link: "https://platform.tata-consulting.co.uk/academy/learning-paths/25d5053d-9be3-4af2-98dc-fcc3cf1cc4e1/ai-assisted-infrastructure-design-with-meshery-and-kanvas/"
   - title: "Recommended skills"
     children:
       - title: "Comfort with the Linux command line"
@@ -70,9 +70,9 @@ related_resources:
   - title: "Hands-on Challenges"
     children:
       - title: "Ship It with an Agent"
-        link: "https://cloud.meshery.io/academy/challenges/25d5053d-9be3-4af2-98dc-fcc3cf1cc4e1/ship-it-with-an-agent/"
+        link: "https://platform.tata-consulting.co.uk/academy/challenges/25d5053d-9be3-4af2-98dc-fcc3cf1cc4e1/ship-it-with-an-agent/"
       - title: "CAINA Capstone"
-        link: "https://cloud.meshery.io/academy/challenges/25d5053d-9be3-4af2-98dc-fcc3cf1cc4e1/caina-capstone/"
+        link: "https://platform.tata-consulting.co.uk/academy/challenges/25d5053d-9be3-4af2-98dc-fcc3cf1cc4e1/caina-capstone/"
   - title: "Documentation"
     children:
       - title: "Meshery"
@@ -114,12 +114,12 @@ The credential has two required parts:
    (75 minutes, proctored). Pass mark **70%**.
 2. A **hands-on lab** - generate a design with an LLM, deploy it with a coding agent and Meshery,
    and validate it. Delivered as the
-   [CAINA Capstone challenge](https://cloud.meshery.io/academy/challenges/25d5053d-9be3-4af2-98dc-fcc3cf1cc4e1/caina-capstone/).
+   [CAINA Capstone challenge](https://platform.tata-consulting.co.uk/academy/challenges/25d5053d-9be3-4af2-98dc-fcc3cf1cc4e1/caina-capstone/).
 
 ## How to prepare
 
 Work through Learning Paths 1-3, then attempt the
-[Ship It with an Agent](https://cloud.meshery.io/academy/challenges/25d5053d-9be3-4af2-98dc-fcc3cf1cc4e1/ship-it-with-an-agent/)
+[Ship It with an Agent](https://platform.tata-consulting.co.uk/academy/challenges/25d5053d-9be3-4af2-98dc-fcc3cf1cc4e1/ship-it-with-an-agent/)
 challenge as a warm-up. The competency blueprint above shows where to focus your study time.
 
 ## What it proves
@@ -129,5 +129,5 @@ correct design YAML, use a coding agent to deploy a design through `mesheryctl`,
 result with Meshery's relationship and policy checks - safely, with a human in the loop.
 
 Ready for more? The
-[Certified AI-Native Infrastructure Professional (CAINP)](https://cloud.meshery.io/academy/certifications/25d5053d-9be3-4af2-98dc-fcc3cf1cc4e1/certified-ai-native-infrastructure-professional/)
+[Certified AI-Native Infrastructure Professional (CAINP)](https://platform.tata-consulting.co.uk/academy/certifications/25d5053d-9be3-4af2-98dc-fcc3cf1cc4e1/certified-ai-native-infrastructure-professional/)
 builds on CAINA to cover agentic day-2 operations, MCP integrations, and governance.
