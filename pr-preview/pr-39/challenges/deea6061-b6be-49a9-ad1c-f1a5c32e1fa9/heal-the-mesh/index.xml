@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Heal the Mesh on TCS Labs Academy</title><link>https://meshery-extensions.github.io/tcslabs-academy/pr-preview/pr-39/challenges/deea6061-b6be-49a9-ad1c-f1a5c32e1fa9/heal-the-mesh/</link><description>Recent content in Heal the Mesh on TCS Labs Academy</description><generator>Hugo</generator><language>en</language><atom:link href="https://meshery-extensions.github.io/tcslabs-academy/pr-preview/pr-39/challenges/deea6061-b6be-49a9-ad1c-f1a5c32e1fa9/heal-the-mesh/index.xml" rel="self" type="application/rss+xml"/><item><title>Heal the Mesh</title><link>https://meshery-extensions.github.io/tcslabs-academy/pr-preview/pr-39/challenges/deea6061-b6be-49a9-ad1c-f1a5c32e1fa9/heal-the-mesh/lab/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://meshery-extensions.github.io/tcslabs-academy/pr-preview/pr-39/challenges/deea6061-b6be-49a9-ad1c-f1a5c32e1fa9/heal-the-mesh/lab/</guid><description>&lt;h2 id="introduction" class="heading-link"&gt;
+ Introduction
+ &lt;a href="#introduction" class="heading-anchor" aria-label="Permalink to this heading"&gt;🔗&lt;/a&gt;
+&lt;/h2&gt;
+&lt;p&gt;Real operations is mostly day-2: things break, and you fix them. In this challenge you will
+deliberately break a workload, then use a coding agent grounded in &lt;a href="https://meshery.io/"&gt;Meshery&lt;/a&gt; and
+Kubernetes signals to diagnose and remediate it - safely, with you approving the fix.&lt;/p&gt;
+
+&lt;h2 id="prerequisites" class="heading-link"&gt;
+ Prerequisites
+ &lt;a href="#prerequisites" class="heading-anchor" aria-label="Permalink to this heading"&gt;🔗&lt;/a&gt;
+&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;A Kubernetes cluster with &lt;code&gt;kubectl&lt;/code&gt; and &lt;a href="https://docs.meshery.io/"&gt;Meshery&lt;/a&gt; connected.&lt;/li&gt;
+&lt;li&gt;The academy microservices demo deployed (see the &lt;em&gt;Ship It with an Agent&lt;/em&gt; challenge), or any
+workload you can safely break.&lt;/li&gt;
+&lt;li&gt;A coding agent with shell access.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id="step-1---deploy-a-target" class="heading-link"&gt;
+ Step 1 - Deploy a target
+ &lt;a href="#step-1---deploy-a-target" class="heading-anchor" aria-label="Permalink to this heading"&gt;🔗&lt;/a&gt;
+&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;mesheryctl design import &lt;span style="color:#ae81ff"&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; -f https://raw.githubusercontent.com/meshery-extensions/tcslabs-academy/master/designs/microservices-demo.yaml &lt;span style="color:#ae81ff"&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; -s &lt;span style="color:#e6db74"&gt;&amp;#34;Kubernetes Manifest&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;# deploy via Meshery, then confirm it is healthy:&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;kubectl -n tcslabs-demo rollout status deploy/api
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h2 id="step-2---break-it" class="heading-link"&gt;
+ Step 2 - Break it
+ &lt;a href="#step-2---break-it" class="heading-anchor" aria-label="Permalink to this heading"&gt;🔗&lt;/a&gt;
+&lt;/h2&gt;
+&lt;p&gt;Pick one fault (do not tell the agent which):&lt;/p&gt;</description></item><item><title>Heal the Mesh - Exam</title><link>https://meshery-extensions.github.io/tcslabs-academy/pr-preview/pr-39/challenges/deea6061-b6be-49a9-ad1c-f1a5c32e1fa9/heal-the-mesh/exam/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://meshery-extensions.github.io/tcslabs-academy/pr-preview/pr-39/challenges/deea6061-b6be-49a9-ad1c-f1a5c32e1fa9/heal-the-mesh/exam/</guid><description/></item></channel></rss>
