@@ -52,26 +52,26 @@ prerequisite_knowledge:
   - title: "Required certification"
     children:
       - title: "Certified AI-Native Infrastructure Associate (CAINA)"
-        link: "https://cloud.meshery.io/academy/certifications/deea6061-b6be-49a9-ad1c-f1a5c32e1fa9/certified-ai-native-infrastructure-associate/"
+        link: "https://cloud.meshery.io/academy/certifications/25d5053d-9be3-4af2-98dc-fcc3cf1cc4e1/certified-ai-native-infrastructure-associate/"
   - title: "Learning Paths"
     children:
       - title: "Coding Agents for Cloud Native Operations (Day-2)"
-        link: "https://cloud.meshery.io/academy/learning-paths/deea6061-b6be-49a9-ad1c-f1a5c32e1fa9/coding-agents-for-cloud-native-operations/"
+        link: "https://cloud.meshery.io/academy/learning-paths/25d5053d-9be3-4af2-98dc-fcc3cf1cc4e1/coding-agents-for-cloud-native-operations/"
       - title: "Model Context Protocol & Agentic Integrations for Meshery"
-        link: "https://cloud.meshery.io/academy/learning-paths/deea6061-b6be-49a9-ad1c-f1a5c32e1fa9/model-context-protocol-and-agentic-integrations-for-meshery/"
+        link: "https://cloud.meshery.io/academy/learning-paths/25d5053d-9be3-4af2-98dc-fcc3cf1cc4e1/model-context-protocol-and-agentic-integrations-for-meshery/"
       - title: "Governance, Security & Responsible AI for Infrastructure"
-        link: "https://cloud.meshery.io/academy/learning-paths/deea6061-b6be-49a9-ad1c-f1a5c32e1fa9/governance-security-and-responsible-ai-for-infrastructure/"
+        link: "https://cloud.meshery.io/academy/learning-paths/25d5053d-9be3-4af2-98dc-fcc3cf1cc4e1/governance-security-and-responsible-ai-for-infrastructure/"
 
 # Hands-on challenges and documentation for further study.
 related_resources:
   - title: "Hands-on Challenges"
     children:
       - title: "Heal the Mesh"
-        link: "https://cloud.meshery.io/academy/challenges/deea6061-b6be-49a9-ad1c-f1a5c32e1fa9/heal-the-mesh/"
+        link: "https://cloud.meshery.io/academy/challenges/25d5053d-9be3-4af2-98dc-fcc3cf1cc4e1/heal-the-mesh/"
       - title: "Build a Meshery MCP Tool"
-        link: "https://cloud.meshery.io/academy/challenges/deea6061-b6be-49a9-ad1c-f1a5c32e1fa9/build-a-meshery-mcp-tool/"
+        link: "https://cloud.meshery.io/academy/challenges/25d5053d-9be3-4af2-98dc-fcc3cf1cc4e1/build-a-meshery-mcp-tool/"
       - title: "CAINP Capstone"
-        link: "https://cloud.meshery.io/academy/challenges/deea6061-b6be-49a9-ad1c-f1a5c32e1fa9/cainp-capstone/"
+        link: "https://cloud.meshery.io/academy/challenges/25d5053d-9be3-4af2-98dc-fcc3cf1cc4e1/cainp-capstone/"
   - title: "Documentation"
     children:
       - title: "Meshery"
@@ -114,16 +114,16 @@ The credential has two required parts:
    (90 minutes, proctored). Pass mark **70%**.
 2. A **mandatory capstone** - operate an AI workload end to end with coding agents and Meshery,
    graded against a published rubric. Delivered as the
-   [CAINP Capstone challenge](https://cloud.meshery.io/academy/challenges/deea6061-b6be-49a9-ad1c-f1a5c32e1fa9/cainp-capstone/).
+   [CAINP Capstone challenge](https://cloud.meshery.io/academy/challenges/25d5053d-9be3-4af2-98dc-fcc3cf1cc4e1/cainp-capstone/).
 
 ## How to prepare
 
 Earn the
-[CAINA](https://cloud.meshery.io/academy/certifications/deea6061-b6be-49a9-ad1c-f1a5c32e1fa9/certified-ai-native-infrastructure-associate/)
+[CAINA](https://cloud.meshery.io/academy/certifications/25d5053d-9be3-4af2-98dc-fcc3cf1cc4e1/certified-ai-native-infrastructure-associate/)
 credential first, then work through Learning Paths 4-6 and the
-[Heal the Mesh](https://cloud.meshery.io/academy/challenges/deea6061-b6be-49a9-ad1c-f1a5c32e1fa9/heal-the-mesh/)
+[Heal the Mesh](https://cloud.meshery.io/academy/challenges/25d5053d-9be3-4af2-98dc-fcc3cf1cc4e1/heal-the-mesh/)
 and
-[Build a Meshery MCP Tool](https://cloud.meshery.io/academy/challenges/deea6061-b6be-49a9-ad1c-f1a5c32e1fa9/build-a-meshery-mcp-tool/)
+[Build a Meshery MCP Tool](https://cloud.meshery.io/academy/challenges/25d5053d-9be3-4af2-98dc-fcc3cf1cc4e1/build-a-meshery-mcp-tool/)
 challenges.
 
 ## What it proves
