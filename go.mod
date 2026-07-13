@@ -1,4 +1,4 @@
-module github.com/meshery-extensions/tcslabs-academy
+module github.com/meshery-extensions/tcslabs-academy/v2
 
 go 1.26.4
 
