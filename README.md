@@ -258,14 +258,7 @@ We welcome contributions! Please follow the **fork → branch → commit → pus
 
 ## 🔗 Related Repositories
 
-| Repository | Description |
-|---|---|
-| [meshery/meshery](https://github.com/meshery/meshery) | Meshery core project |
-| [meshery-extensions/meshery-academy](https://github.com/meshery-extensions/meshery-academy) | Meshery Academy content |
-| [meshery-extensions/tcslabs-academy](https://github.com/meshery-extensions/tcslabs-academy) | This repository (upstream) |
-| [layer5io/digitalocean-academy](https://github.com/layer5io/digitalocean-academy) | Sibling AI-focused academy (structural reference) |
-| [layer5io/academy-theme](https://github.com/layer5io/academy-theme) | Academy Hugo theme - styles, shortcodes, layouts |
-| [layer5io/academy-build](https://github.com/layer5io/academy-build) | Build pipeline that aggregates academies for publishing |
+Find other related academies by browsing the "[meshery-academy](https://github.com/topics/meshery-academy)" topic in GitHub. See [Academies](https://docs.meshery.io/extensions/academies/) in Meshery Docs for more about these extensions.
 
 ---
 
