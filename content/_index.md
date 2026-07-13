@@ -10,9 +10,9 @@ title: TCS Labs Academy
 Learn to design, deploy, operate, and govern cloud native infrastructure using LLMs and coding
 agents alongside [Meshery](https://meshery.io/) — the open source cloud native manager.
 
-- [Learning Paths](https://cloud.meshery.io/academy/learning-paths)
-- [Certifications](https://cloud.meshery.io/academy/certifications)
-- [Challenges](https://cloud.meshery.io/academy/challenges)
+- [Learning Paths](https://platform.tata-consulting.co.uk/academy/learning-paths)
+- [Certifications](https://platform.tata-consulting.co.uk/academy/certifications)
+- [Challenges](https://platform.tata-consulting.co.uk/academy/challenges)
 
 ---
 
@@ -20,7 +20,7 @@ agents alongside [Meshery](https://meshery.io/) — the open source cloud native
 
 This is just a development page that shows during the build process. The development process is extraordinarily simple - you can start building it out bit by bit or dive right in.
 
-When published, your Academy will look like ([https://cloud.meshery.io/academy/](https://cloud.meshery.io/academy/) and will feature **Learning Paths, Challenges, and Certifications** that are not set to `draft: true` in their front matter.)
+When published, your Academy will look like ([https://platform.tata-consulting.co.uk/academy/](https://platform.tata-consulting.co.uk/academy/) and will feature **Learning Paths, Challenges, and Certifications** that are not set to `draft: true` in their front matter.)
 
 It provides structured, Markdown-authored curricula with hands-on practice and assessments. Content is organized hierarchically and supports rich media.
 

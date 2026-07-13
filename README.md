@@ -7,7 +7,7 @@
 
 # TCS Labs Academy
 
-TCS Labs Academy is the official learning-content repository for TCS Labs on the [Meshery Academy](https://cloud.meshery.io/academy) platform. It hosts structured learning paths, challenges, certifications, and Meshery infrastructure designs - teaching engineers to **use LLMs and coding agents to design, deploy, operate, and govern cloud native infrastructure**, with [Meshery](https://meshery.io/) as the management plane.
+TCS Labs Academy is the official learning-content repository for TCS Labs on the [Meshery Academy](https://platform.tata-consulting.co.uk/academy) platform. It hosts structured learning paths, challenges, certifications, and Meshery infrastructure designs - teaching engineers to **use LLMs and coding agents to design, deploy, operate, and govern cloud native infrastructure**, with [Meshery](https://meshery.io/) as the management plane.
 
 > 🗺️ **Start with the [Curriculum Master Outline](./CURRICULUM.md)** - the complete map of learning paths, courses, the tiered AI certification (CAINA + CAINP), challenges, and importable designs.
 
@@ -20,7 +20,7 @@ TCS Labs Academy is the official learning-content repository for TCS Labs on the
 | | |
 |---|---|
 | **Purpose** | Primary source of TCS Labs-specific Meshery learning content |
-| **Platform** | Runs on the shared [Layer5 Academy](https://cloud.meshery.io/academy) platform |
+| **Platform** | Runs on the shared [Layer5 Academy](https://platform.tata-consulting.co.uk/academy) platform |
 | **Authoring** | Markdown-based content with live local preview via Hugo |
 | **Content types** | Learning paths · Challenges · Certifications · Infrastructure designs |
 | **Curriculum** | 6 learning paths, tiered AI certification (CAINA + CAINP) - see [CURRICULUM.md](./CURRICULUM.md) |
