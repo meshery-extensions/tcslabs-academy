@@ -10,7 +10,7 @@ markup:
 
 params:
   academy:
-    domain: cloud.meshery.io
+    domain: platform.tata-consulting.co.uk
 
 module:
   hugoVersion:
