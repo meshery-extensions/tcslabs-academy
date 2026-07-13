@@ -12,7 +12,7 @@ their courses, chapters (modules), and lessons; the hands-on challenges; the imp
 designs; and the **tiered AI certification** (Associate + Professional). The generated Hugo content
 under `content/` implements this outline.
 
-- **Organization UID:** `deea6061-b6be-49a9-ad1c-f1a5c32e1fa9`
+- **Organization UID:** `25d5053d-9be3-4af2-98dc-fcc3cf1cc4e1`
 - **Content model:** `Learning Path → Course → Chapter (module) → Lesson (page)`
 - **Assessment model:** module `quiz.md` · course `test.md` · learning-path `exam.md` · `Challenge → { lab, exam }`
 
@@ -214,7 +214,7 @@ pipeline, and apply responsible-AI practices in an enterprise/IDP context.
 
 The Academy offers a **two-tier** credential. Each certification is a first-class
 `type: "certification"` entity under
-`content/certifications/deea6061-b6be-49a9-ad1c-f1a5c32e1fa9/`, carrying its competency blueprint
+`content/certifications/25d5053d-9be3-4af2-98dc-fcc3cf1cc4e1/`, carrying its competency blueprint
 (domains + weighting), `prerequisite_knowledge`, `related_resources`, and `additional_attributes`
 (format, pass mark, retake policy, validity). Each is **supported by** the core learning paths and a
 **capstone challenge**.
@@ -337,10 +337,10 @@ weight: <n>
 
 Assessments use `type: "test"` (`quiz.md`, `test.md`, `exam.md`) and `type: "lab"` (`lab.md`) as
 documented in the [README](./README.md). Images are referenced with the `usestatic` shortcode for
-multi-tenant compatibility, and live under `static/deea6061-b6be-49a9-ad1c-f1a5c32e1fa9/`.
+multi-tenant compatibility, and live under `static/25d5053d-9be3-4af2-98dc-fcc3cf1cc4e1/`.
 
 > **Publishing note.** This academy is authored under the TCS Labs organization UID
-> `deea6061-b6be-49a9-ad1c-f1a5c32e1fa9`. Before it is aggregated into production by
+> `25d5053d-9be3-4af2-98dc-fcc3cf1cc4e1`. Before it is aggregated into production by
 > [`layer5io/academy-build`](https://github.com/layer5io/academy-build), this UID and each content
 > `id` must be registered through the Cloud content wizard, and the module must be added to
 > `academy-build`'s `academy_config.json` and `hugo.yaml`.

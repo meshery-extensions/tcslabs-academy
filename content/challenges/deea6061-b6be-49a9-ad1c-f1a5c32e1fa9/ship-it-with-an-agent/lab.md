@@ -8,7 +8,7 @@ title: "Ship It with an Agent"
 
 In this challenge you will deploy a small microservices application using a coding agent and
 [Meshery](https://meshery.io/). It is the warm-up for the
-[CAINA](https://cloud.meshery.io/academy/certifications/deea6061-b6be-49a9-ad1c-f1a5c32e1fa9/certified-ai-native-infrastructure-associate/)
+[CAINA](https://cloud.meshery.io/academy/certifications/25d5053d-9be3-4af2-98dc-fcc3cf1cc4e1/certified-ai-native-infrastructure-associate/)
 credential: a complete, low-risk run through the design-to-deploy loop.
 
 ## Prerequisites

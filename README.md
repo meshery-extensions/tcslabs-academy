@@ -24,7 +24,7 @@ TCS Labs Academy is the official learning-content repository for TCS Labs on the
 | **Authoring** | Markdown-based content with live local preview via Hugo |
 | **Content types** | Learning paths · Challenges · Certifications · Infrastructure designs |
 | **Curriculum** | 6 learning paths, tiered AI certification (CAINA + CAINP) - see [CURRICULUM.md](./CURRICULUM.md) |
-| **Org ID** | `deea6061-b6be-49a9-ad1c-f1a5c32e1fa9` |
+| **Org ID** | `25d5053d-9be3-4af2-98dc-fcc3cf1cc4e1` |
 
 ---
 
@@ -130,7 +130,7 @@ The Academy content follows this structure: **Learning Path → Course → Chapt
 content/
 └── learning-paths/
     ├── _index.md
-    └── deea6061-b6be-49a9-ad1c-f1a5c32e1fa9/   # TCS Labs org UID
+    └── 25d5053d-9be3-4af2-98dc-fcc3cf1cc4e1/   # TCS Labs org UID
         └── <your-learning-path>/
             ├── _index.md
             └── <your-course>/
