@@ -10,7 +10,7 @@ on:
         description: 'Organization ID'
         required: true
       token:
-        description: 'Bearer token'
+        description: 'API token for publishing academy to remote provider'
         required: true
       academy-name:
         description: 'Name of the Academy represented by this repo'
@@ -57,7 +57,7 @@ jobs:
         uses: layer5io/academy-build@v0.1.6
         with:
           orgId: ${{ github.event.inputs.orgId || secrets.ACADEMY_ORG_ID }}
-          token: ${{ github.event.inputs.token || secrets.PROVIDER_TOKEN }}
+          token: ${{ github.event.inputs.token || secrets.ACADEMY_TOKEN }}
           academy-name: ${{ github.event.inputs.academy-name || 'TCS Labs Academy' }}
           version: ${{ github.event.inputs.version != '' && github.event.inputs.version || github.ref_name }}
 
