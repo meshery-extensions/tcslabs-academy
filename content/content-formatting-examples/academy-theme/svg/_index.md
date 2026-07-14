@@ -20,6 +20,6 @@ The `svg` shortcode renders an inline SVG icon from `assets/icons/{name}.svg`.
 
 **Example:**
 
-The icon renders inline: {{< svg name="exoscale-icon" >}}
+<!-- The icon renders inline: {{< svg name="exoscale-icon" >}} -->
 
 To add your own SVG icons, place `.svg` files in the `assets/icons/` directory.
