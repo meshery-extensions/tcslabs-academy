@@ -2,7 +2,7 @@
 type: "certification"
 title: "Certified AI-Native Infrastructure Associate (CAINA)"
 description: "Prove you can use LLMs and coding agents to design, generate, deploy, and validate cloud native infrastructure with Meshery and Kanvas. The associate-level credential of the TCS Labs Academy."
-id: "0f3ed1dc-536b-4fc9-a409-de67dadefcb0"
+id: "ea04bd08-1ec9-4659-a8e7-1b7d67ce0fad"
 banner: "banner.svg"
 weight: 1
 level: "intermediate"
