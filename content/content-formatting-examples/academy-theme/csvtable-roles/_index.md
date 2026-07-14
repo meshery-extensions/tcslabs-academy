@@ -13,7 +13,3 @@ The `csvtable-roles` shortcode reads `static/data/csv/keys-backup.csv` and rende
 ```
 
 The CSV file must be located at `static/data/csv/keys-backup.csv` with the same format used by `csvtable`.
-
-**Example:**
-
-{{< csvtable-roles >}}

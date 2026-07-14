@@ -7,9 +7,9 @@ draft: true
 ---
 
 ```text
-{{</* redoc "examples/openapi/example.json" */>}}
+{{</* redoc "example.json" */>}}
 ```
 
 **Example:**
 
-{{< redoc "examples/openapi/example.json" >}}
+{{< redoc "example.json" >}}

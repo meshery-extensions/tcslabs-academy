@@ -9,7 +9,7 @@ draft: true
 The `usestatic` shortcode resolves a tenant-scoped static file path, prefixing it with the organization UUID configured in `params.defined_org`.
 
 ```text
-{{</* usestatic "images/exoscale-icon.png" */>}}
+{{</* usestatic "exoscale-icon.png" */>}}
 ```
 
-Resolved tenant-scoped static path: {{< usestatic "images/exoscale-icon.png" >}}
+Resolved tenant-scoped static path: {{< usestatic "./exoscale-icon.png" >}}

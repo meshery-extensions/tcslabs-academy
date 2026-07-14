@@ -13,7 +13,3 @@ The `csvtable` shortcode reads `static/data/csv/keys-backup.csv` and renders a p
 ```
 
 The CSV file must be located at `static/data/csv/keys-backup.csv` and contain columns for Category, Function, Feature, and various role names.
-
-**Example:**
-
-{{< csvtable >}}

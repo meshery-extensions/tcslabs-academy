@@ -22,7 +22,7 @@ This is the first rendered tab.
 {{< /tab >}}
 
 {{% tab header="Image" lang="en" %}}
-![Rendered tab image](/examples/images/exoscale-icon.png)
+![Rendered tab image](exoscale-icon.png)
 {{< /tab >}}
 
 {{< /tabpane >}}
