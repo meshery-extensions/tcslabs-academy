@@ -6,6 +6,7 @@ id: "2355e504-0606-4d1c-9f6f-9f7b07b5ad7d"
 banner: "banner.svg"
 weight: 1
 level: "beginner"
+draft: true
 ---
 
 **Organization ID:** {{< org-id >}}
