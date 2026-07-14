@@ -6,4 +6,5 @@ id: "5d26d3ec-ddfb-46f7-9684-b56e9b567564"
 banner: "banner.svg"
 weight: 3
 level: "intermediate"
+draft: true
 ---
