@@ -1,0 +1,98 @@
+# Untrusted half of the PR preview pipeline.
+#
+# Runs on `pull_request`, so for fork PRs this job gets a READ-ONLY token and
+# NO access to secrets. That is what makes it safe to run a contributor's own
+# Makefile / package.json here: even though their code executes, there is
+# nothing privileged in scope for it to abuse.
+#
+# It never touches gh-pages. It only builds the site and hands the result to the
+# trusted deploy workflow as an artifact (plus a tiny pr.env describing what to do).
+name: preview-build
+
+on:
+  pull_request:
+    branches: [ master ]
+    types: [opened, synchronize, reopened, closed]
+
+# Least privilege: this job only needs to read the repo and upload an artifact.
+permissions:
+  contents: read
+
+# Per-PR group: a rapid second push cancels the older in-flight build for THAT PR.
+# (Different PRs still build in parallel here — that is fine, because the build
+# writes nothing shared. The shared gh-pages branch is only touched by the deploy
+# workflow, which serializes separately.)
+concurrency:
+  group: preview-build-${{ github.event.pull_request.number }}
+  cancel-in-progress: true
+
+defaults:
+  run:
+    shell: bash
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      # Always record which PR this is and whether we're deploying or removing.
+      # This runs for every event (including `closed`) so the deploy workflow
+      # always has instructions, even when there's no site to build.
+      - name: Record PR metadata
+        run: |
+          set -euo pipefail
+          mkdir -p artifact
+          {
+            echo "PR_NUMBER=${{ github.event.pull_request.number }}"
+            if [[ "${{ github.event.action }}" == "closed" ]]; then
+              echo "PR_ACTION=remove"
+            else
+              echo "PR_ACTION=deploy"
+            fi
+          } > artifact/pr.env
+
+      - name: Checkout PR code
+        if: github.event.action != 'closed'
+        uses: actions/checkout@v6
+
+      - name: Setup Go
+        if: github.event.action != 'closed'
+        uses: actions/setup-go@v5
+        with:
+          go-version-file: go.mod
+
+      - name: Setup Node
+        if: github.event.action != 'closed'
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      # `make setup` == `npm install`, which installs the Node-managed
+      # hugo-extended@0.158.0 into node_modules/.bin (what `check-deps` looks for).
+      - name: Install dependencies
+        if: github.event.action != 'closed'
+        run: make setup
+
+      # `make build-preview` -> `npm run build:preview`, which already reads the
+      # base URL from $DEPLOY_PRIME_URL (defaulting to "/"). We just set it.
+      #
+      # It assumes gh pages isn't being served by a Custom Domain
+      - name: Build preview
+        if: github.event.action != 'closed'
+        env:
+          DEPLOY_PRIME_URL: https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/pr-preview/pr-${{ github.event.pull_request.number }}/
+        run: make build-preview
+
+      # Hugo writes to ./public. Stage it into the artifact.
+      - name: Stage built site
+        if: github.event.action != 'closed'
+        run: cp -r public artifact/site
+
+      # Fixed artifact name is fine: the deploy workflow downloads from THIS run's
+      # id, so two concurrent PRs never collide on it.
+      - name: Upload preview artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: pr-preview
+          path: artifact
+          retention-days: 1
+          if-no-files-found: error
