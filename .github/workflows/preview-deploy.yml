@@ -1,29 +1,26 @@
-# Trusted half of the PR preview pipeline.
-#
-# Runs on `workflow_run`, i.e. AFTER "Preview build" finishes. This always runs
-# from the master copy of this file, in the base-repo context, so it holds the
-# write token. Crucially it NEVER checks out or runs the contributor's code — it
-# only downloads the already-built static files and publishes them to gh-pages.
-# The artifact is treated as data to copy, never as code to execute, so there is
-# no path for PR code to reach the token.
 name: preview-deploy
 
 on:
-  workflow_run:
-    workflows: ["preview-build"]
-    types: [completed]
+  workflow_call:
+    inputs:
+      repo-name:
+        description: owner/repo of the calling repository. Permanent metadata sent by the caller.
+        required: true
+        type: string
+      deployment-url:
+        description: Base URL of the calling repo's GitHub Pages site, no trailing slash (e.g. https://owner.github.io/repo).
+        required: true
+        type: string
+      run_id:
+        description: Id of the completed preview-build workflow run to deploy.
+        required: true
+        type: string
+      head_sha:
+        description: Head SHA the triggering run was built from.
+        required: true
+        type: string
 
-permissions:
-  contents: write        # push previews to gh-pages
-  pull-requests: write   # post the preview / pruned comments
-  actions: read          # download the artifact from the triggering run
-
-# ONE global group for all gh-pages writes, and DO NOT cancel in progress.
-# This is the fix for the cross-PR race: pushes queue and take turns instead of
-# racing into non-fast-forward rejections.
-concurrency:
-  group: preview-deploy-gh-pages
-  cancel-in-progress: false
+permissions: {}
 
 defaults:
   run:
@@ -31,143 +28,138 @@ defaults:
 
 jobs:
   deploy:
-    # Only handle builds that came from a pull_request, and only successful ones.
-    # A failed build (broken Hugo, etc.) is skipped, so we never publish an empty
-    # or half-built preview. `closed` events still succeed (their steps are skipped),
-    # so the remove path still runs.
-    if: >
-      github.event.workflow_run.event == 'pull_request' &&
-      github.event.workflow_run.conclusion == 'success'
+    if: github.event_name == 'workflow_run'
     runs-on: ubuntu-latest
-    env:
-      PREVIEW_RETENTION_LIMIT: 6
+    timeout-minutes: 10
+    permissions:
+      contents: write # Push the preview to gh-pages.
+      pull-requests: write # Sticky preview-URL comment on the PR.
+      actions: read # Download the artifact from the triggering run.
     steps:
-      # Pull the artifact from the specific run that triggered us (run-id scopes it).
-      - name: Download preview artifact
-        uses: actions/download-artifact@v4
-        with:
-          name: pr-preview
-          path: incoming
-          run-id: ${{ github.event.workflow_run.id }}
-          github-token: ${{ secrets.GITHUB_TOKEN }}
-
-      # Read + validate the metadata. The artifact came from an untrusted build,
-      # so treat its contents as untrusted input: whitelist the values before use.
-      - name: Read PR metadata
-        id: meta
+      - name: Resolve pull request for this build
+        id: pr
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO_FULL: ${{ inputs.repo-name }}
+          HEAD_SHA: ${{ inputs.head_sha }}
+          BASE_BRANCH: ${{ github.event.repository.default_branch }}
         run: |
           set -euo pipefail
-          source incoming/pr.env
-          [[ "$PR_NUMBER" =~ ^[0-9]+$ ]] || { echo "Invalid PR number"; exit 1; }
-          [[ "$PR_ACTION" == "deploy" || "$PR_ACTION" == "remove" ]] || { echo "Invalid action"; exit 1; }
-          echo "pr_number=$PR_NUMBER" >> "$GITHUB_OUTPUT"
-          echo "pr_action=$PR_ACTION" >> "$GITHUB_OUTPUT"
+          [[ "$HEAD_SHA" =~ ^[0-9a-f]{40}$ ]] || { echo "Invalid head SHA"; exit 1; }
+          number="$(gh api --paginate "repos/${GH_REPO_FULL}/pulls?state=open&per_page=100" \
+            --jq '.[] | select(.head.sha == env.HEAD_SHA and .base.ref == env.BASE_BRANCH) | .number' \
+            | head -n1)"
+          if [[ -z "$number" ]]; then
+            echo "::notice::No open PR against ${BASE_BRANCH} has head ${HEAD_SHA}; build is stale or PR closed. Skipping deploy."
+          fi
+          echo "number=${number}" >> "$GITHUB_OUTPUT"
 
-      # gh-pages is OUR branch, not the PR's — safe to check out and operate on.
+      - name: Download preview artifact
+        if: steps.pr.outputs.number != ''
+        uses: actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c # v8.0.1
+        with:
+          name: preview-site
+          run-id: ${{ inputs.run_id }}
+          github-token: ${{ github.token }}
+          path: ${{ runner.temp }}/preview-site
+
+      - name: Artifact sanity checks
+        if: steps.pr.outputs.number != ''
+        env:
+          SITE_DIR: ${{ runner.temp }}/preview-site
+          MAX_SITE_MB: 200
+        run: |
+          set -euo pipefail
+          test -f "${SITE_DIR}/index.html" || { echo "No index.html at artifact root"; exit 1; }
+          if find "${SITE_DIR}" -type l | grep -q .; then
+            echo "Removing symlinks smuggled into the artifact:"
+            find "${SITE_DIR}" -type l -print -delete
+          fi
+          size_mb="$(du -sm "${SITE_DIR}" | cut -f1)"
+          if (( size_mb > MAX_SITE_MB )); then
+            echo "Artifact too large: ${size_mb}MB (limit ${MAX_SITE_MB}MB)"; exit 1
+          fi
+
       - name: Checkout gh-pages
-        uses: actions/checkout@v6
+        if: steps.pr.outputs.number != ''
+        uses: actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0 # v7.0.0
         with:
           ref: gh-pages
-          path: gh-pages
-          fetch-depth: 0
+          fetch-depth: 1
+          sparse-checkout: pr-preview
 
-      - name: Publish preview and prune
-        id: publish
-        working-directory: gh-pages
+      - name: Publish preview
+        if: steps.pr.outputs.number != ''
         env:
-          PR_NUMBER: ${{ steps.meta.outputs.pr_number }}
-          PR_ACTION: ${{ steps.meta.outputs.pr_action }}
+          PR_NUMBER: ${{ steps.pr.outputs.number }}
+          SITE_DIR: ${{ runner.temp }}/preview-site
         run: |
           set -euo pipefail
+          [[ "$PR_NUMBER" =~ ^[0-9]+$ ]] || { echo "Invalid PR number"; exit 1; }
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          mkdir -p pr-preview
 
-          target="pr-preview/pr-${PR_NUMBER}"
-          rm -rf "$target"
-          if [[ "$PR_ACTION" == "deploy" ]]; then
+          publish() {
+            git fetch origin gh-pages
+            git reset --hard origin/gh-pages
+            target="pr-preview/pr-${PR_NUMBER}"
+            rm -rf "$target"
             mkdir -p "$target"
-            cp -r ../incoming/site/. "$target/"
-          fi
-
-          # Commit the deploy/remove first, so the current PR's folder gets a
-          # fresh commit timestamp and sorts as "newest" during pruning below.
-          git add -A pr-preview
-          if ! git diff --cached --quiet; then
-            git commit -m "${PR_ACTION} preview for PR #${PR_NUMBER}"
-          fi
-
-          # Retention: keep only the newest N previews by last-commit time.
-          removed=()
-          mapfile -t previews < <(
-            while IFS= read -r p; do
-              ts="$(git log -1 --format=%ct -- "pr-preview/$p" 2>/dev/null || echo 0)"
-              printf '%s %s\n' "$ts" "$p"
-            done < <(find pr-preview -mindepth 1 -maxdepth 1 -type d -name 'pr-*' -printf '%f\n') \
-              | sort -nr | awk '{print $2}'
-          )
-          if (( ${#previews[@]} > PREVIEW_RETENTION_LIMIT )); then
-            for p in "${previews[@]:PREVIEW_RETENTION_LIMIT}"; do
-              rm -rf "pr-preview/$p"
-              removed+=("${p#pr-}")
-            done
+            cp -r "${SITE_DIR}/." "$target/"
             git add -A pr-preview
-            git commit -m "Prune old PR previews" || true
-          fi
+            if git diff --cached --quiet; then
+              echo "Preview unchanged; nothing to push."
+              return 0
+            fi
+            git commit -m "deploy preview for PR #${PR_NUMBER}"
+            git push origin gh-pages
+          }
 
-          # Single push at the end. Serialized by the concurrency group above,
-          # so this is always a clean fast-forward.
-          git push origin gh-pages
+          for attempt in 1 2 3 4 5; do
+            if publish; then exit 0; fi
+            echo "Push rejected (attempt ${attempt}); retrying against new tip"
+            sleep "$(( RANDOM % 4 + 1 ))"
+          done
+          echo "Failed to publish after 5 attempts"; exit 1
 
-          removed_json="$(printf '%s\n' "${removed[@]:-}" | grep -v '^$' | jq -R . | jq -sc . 2>/dev/null || echo '[]')"
-          echo "removed_prs_json=${removed_json}" >> "$GITHUB_OUTPUT"
-
-      # Sticky comment on the current PR with the preview URL (deploy only).
-      # `number:` is required because workflow_run has no pull_request context.
-      # Keep this URL in sync with DEPLOY_PRIME_URL in preview-build.yml.
       - name: Comment preview URL
-        if: steps.meta.outputs.pr_action == 'deploy'
-        uses: marocchino/sticky-pull-request-comment@v2
-        with:
-          header: pr-preview
-          number: ${{ steps.meta.outputs.pr_number }}
-          message: |
-            🚀 Preview: https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/pr-preview/pr-${{ steps.meta.outputs.pr_number }}/
-            > *GitHub Pages may take a moment to publish — refresh if it 404s.*
-
-      # Notify any PRs whose previews were pruned to stay under the limit.
-      - name: Comment on pruned previews
-        if: steps.publish.outputs.removed_prs_json != '[]'
-        uses: actions/github-script@v7
+        if: steps.pr.outputs.number != ''
+        uses: actions/github-script@3a2844b7e9c422d3c10d287c895573f7108da1b3 # v9.0.0
         env:
-          REMOVED_PRS_JSON: ${{ steps.publish.outputs.removed_prs_json }}
-          PREVIEW_RETENTION_LIMIT: ${{ env.PREVIEW_RETENTION_LIMIT }}
+          PR_NUMBER: ${{ steps.pr.outputs.number }}
+          DEPLOYMENT_URL: ${{ inputs.deployment-url }}
         with:
           script: |
-            const removed = JSON.parse(process.env.REMOVED_PRS_JSON);
-            const limit = process.env.PREVIEW_RETENTION_LIMIT;
-            const marker = "<!-- Sticky Pull Request Commentpr-preview -->";
-            for (const pr of removed) {
-              const body =
-                `Preview deployment for PR #${pr} removed.\n\n` +
-                `Only the ${limit} most recently updated previews are kept on ` +
-                `GitHub Pages to stay within deployment size limits.\n\n` +
-                `Push a new commit to regenerate this preview.\n${marker}`;
-              const { data: comments } = await github.rest.issues.listComments({
+            const marker = '<!-- pr-preview-comment -->';
+            const prNumber = Number(process.env.PR_NUMBER);
+            const url = `${process.env.DEPLOYMENT_URL}/pr-preview/pr-${prNumber}/`;
+            const body = [
+              `🚀 Preview: ${url}`,
+              '',
+              '> GitHub Pages may take a moment to publish — refresh if it 404s.',
+              marker,
+            ].join('\n');
+            const comments = await github.paginate(github.rest.issues.listComments, {
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: prNumber,
+              per_page: 100,
+            });
+            const existing = [...comments].reverse().find(
+              (c) => c.user?.type === 'Bot' && c.body?.includes(marker),
+            );
+            if (existing) {
+              await github.rest.issues.updateComment({
                 owner: context.repo.owner,
                 repo: context.repo.repo,
-                issue_number: Number(pr),
-                per_page: 100,
+                comment_id: existing.id,
+                body,
               });
-              const existing = [...comments].reverse().find(c =>
-                c.user?.login === "github-actions[bot]" && c.body?.includes(marker));
-              if (existing) {
-                await github.rest.issues.updateComment({
-                  owner: context.repo.owner, repo: context.repo.repo,
-                  comment_id: existing.id, body });
-              } else {
-                await github.rest.issues.createComment({
-                  owner: context.repo.owner, repo: context.repo.repo,
-                  issue_number: Number(pr), body });
-              }
+            } else {
+              await github.rest.issues.createComment({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: prNumber,
+                body,
+              });
             }

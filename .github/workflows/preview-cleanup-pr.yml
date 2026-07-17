@@ -1,0 +1,25 @@
+name: preview-cleanup-pr
+
+on:
+  pull_request_target:
+    branches: [master]
+    types: [closed]
+  workflow_dispatch:
+
+permissions: {}
+
+concurrency:
+  group: preview-cleanup-pr
+  cancel-in-progress: true
+
+jobs:
+  clean:
+    permissions:
+      contents: write
+      pull-requests: write
+    # Local reference for now; point at the central repo once published:
+    #   uses: <org>/<central-repo>/.github/workflows/preview-clean.yml@<pinned-sha>
+    uses: ./.github/workflows/preview-clean.yml
+    with:
+      repo-name: ${{ github.repository }}
+      retention_limit: 6
