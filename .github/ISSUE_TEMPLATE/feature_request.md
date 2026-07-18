@@ -23,4 +23,4 @@ assignees: ''
 ---
 #### Contributor Guide and Resources
 - 📚 [Instructions for contributing to tcslabs-academy](https://github.com/meshery-extensions/tcslabs-academy/blob/master/CONTRIBUTING.md)
-- 🙋🙋 Questions: [Discussion Forum](https://meshery.io/community#discussion-forums) and [Community Slack](http://slack.meshery.io)
+- 🙋🙋 Questions: [Discussion Forum](https://discuss.meshery.io) and [Community Slack](http://slack.meshery.io)
