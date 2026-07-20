@@ -21,5 +21,4 @@ jobs:
     #   uses: <org>/<central-repo>/.github/workflows/preview-clean.yml@<pinned-sha>
     uses: ./.github/workflows/preview-clean.yml
     with:
-      repo-name: ${{ github.repository }}
       retention_limit: 6

@@ -3,10 +3,6 @@ name: preview-clean
 on:
   workflow_call:
     inputs:
-      repo-name:
-        description: owner/repo of the calling repository. Permanent metadata sent by the caller.
-        required: true
-        type: string
       retention_limit:
         description: Maximum number of PR previews to keep on gh-pages.
         required: false
@@ -39,7 +35,7 @@ jobs:
         id: reconcile
         env:
           GH_TOKEN: ${{ github.token }}
-          GH_REPO_FULL: ${{ inputs.repo-name }}
+          GH_REPO_FULL: ${{ github.repository }}
           RETENTION_LIMIT: ${{ inputs.retention_limit }}
         run: |
           set -euo pipefail

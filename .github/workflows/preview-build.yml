@@ -3,10 +3,6 @@ name: preview-build
 on:
   workflow_call:
     inputs:
-      repo-name:
-        description: owner/repo of the calling repository. Permanent metadata sent by the caller.
-        required: true
-        type: string
       deployment-url:
         description: Base URL of the calling repo's GitHub Pages site, no trailing slash (e.g. https://owner.github.io/repo).
         required: true
