@@ -286,15 +286,8 @@ Find other related academies by browsing the "[meshery-academy](https://github.c
 This repository is available as open source under the terms of the [Apache 2.0 License](./LICENSE).
 
 ---
-
-<div style="clear:both;"></div>
-  <img src=".github/assets/images/readme/Layer5-MeshMentors.png"
-       width="50"
-       alt="Layer5 Community"
-       align="left"
-       style="margin-right:15px;" />
        
-## Community & Contributions
+## 👥 Community & Contributions
 
 We warmly welcome all contributors! As you get started, please review this project's [contributing guidelines](CONTRIBUTING.md).
 
@@ -302,31 +295,31 @@ We warmly welcome all contributors! As you get started, please review this proje
 Contributors are expected to follow the [CNCF Code of Conduct](https://github.com/cncf/foundation/blob/master/code-of-conduct.md).
 
 <p>
-<a href="https://slack.layer5.io">
+<a href="https://slack.meshery.io">
 
 <picture align="right">
-  <source media="(prefers-color-scheme: dark)" srcset=".github/assets/images/readme/slack-dark-128.png">
-  <source media="(prefers-color-scheme: light)" srcset=".github/assets/images/readme/slack-128.png">
-  <img src=".github/assets/images/readme/slack-128.png"
+  <source media="(prefers-color-scheme: dark)" srcset=".github/assets/images/readme/slack.svg">
+  <source media="(prefers-color-scheme: light)" srcset=".github/assets/images/readme/slack.svg">
+  <img src=".github/assets/images/readme/slack.svg"
        width="120"
        align="right"
-       alt="Join Layer5 Slack">
+       alt="Join Meshery Slack">
 </picture>
 
 </a>
 
-<a href="https://layer5.io/community">
+<a href="https://meshery.io/community">
   <img src=".github/assets/images/readme/community.svg"
        width="140"
        align="left"
        style="margin-right:10px;"
-       alt="Layer5 Community">
+       alt="Meshery Community">
 </a>
 
-✔️ <em><strong>Join</strong></em> the <a href="https://slack.layer5.io">Layer5 Slack Community</a>.<br />
-✔️ <em><strong>Discuss</strong></em> in the <a href="https://discuss.layer5.io">Community Forum</a>.<br />
-✔️ <em><strong>Explore</strong></em> the <a href="https://layer5.io/community/handbook">Community Handbook</a>.<br />
-✔️ <em><strong>Start</strong></em> with the <a href="https://layer5.io/community/newcomers">Newcomer's Guide</a>.<br />
+✔️ <em><strong>Join</strong></em> the <a href="https://slack.meshery.io">Meshery Slack Community</a>.<br />
+✔️ <em><strong>Discuss</strong></em> in the <a href="https://discuss.meshery.io/">Community Forum</a>.<br />
+✔️ <em><strong>Explore</strong></em> the <a href="https://discuss.meshery.io/c/community/12">Meshery Community Discussions</a>.<br />
+✔️ <em><strong>Get Started</strong></em> with <a href="https://meshery.io/#getting-started">Meshery</a>.<br />
 
 </p>
 
