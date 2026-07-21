@@ -1,10 +1,21 @@
 <p align="center">
-  <img src=".github/assets/images/meshery/meshery-logo-dark-text-side.svg"  width="45%" alt="Meshery Logo">
+  <picture>
+    <source
+      media="(prefers-color-scheme: dark)"
+      srcset=".github/assets/images/meshery/meshery-logo-dark-text-side.svg">
+    <source
+      media="(prefers-color-scheme: light)"
+      srcset=".github/assets/images/meshery/meshery-logo-light-text-side.svg">
+    <img
+      src=".github/assets/images/meshery/meshery-logo-light-text-side.svg"
+      width="45%"
+      alt="Meshery Logo">
+  </picture>
 </p>
 
 <p align="center">
 <a href="https://layer5.io/learn/academy"><img src="https://img.shields.io/badge/Meshery-Academy-00B39F?style=flat-square&logo=meshery&logoColor=white"   alt="Meshery Academy"></a>
-<a href="LICENSE"><img src="https://img.shields.io/github/license/Salmaan-M/tcslabs-academy?style=flat-square" alt="Apache 2.0 License"></a>  <img alt="GitHub go.mod Go version" src="https://img.shields.io/github/go-mod/go-version/meshery-extensions/meshery-academy">
+<a href="LICENSE"><img src="https://img.shields.io/github/license/meshery-extensions/tcslabs-academy?style=flat-square" alt="Apache 2.0 License"></a>  <img alt="GitHub go.mod Go version" src="https://img.shields.io/github/go-mod/go-version/meshery-extensions/meshery-academy">
 </p>
 
 <img src=".github/assets/images/readme/tcslabs-academy-color.svg"
