@@ -1,0 +1,333 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>TCS Labs Academy</title><link>https://meshery-extensions.github.io/tcslabs-academy/pr-preview/pr-57/</link><description>Recent content on TCS Labs Academy</description><generator>Hugo</generator><language>en</language><atom:link href="https://meshery-extensions.github.io/tcslabs-academy/pr-preview/pr-57/index.xml" rel="self" type="application/rss+xml"/><item><title/><link>https://meshery-extensions.github.io/tcslabs-academy/pr-preview/pr-57/content-formatting-examples/docsy/iframe/frame-example/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://meshery-extensions.github.io/tcslabs-academy/pr-preview/pr-57/content-formatting-examples/docsy/iframe/frame-example/</guid><description>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+ &lt;meta charset="UTF-8"&gt;
+ &lt;style&gt;
+ body {
+ font-family: system-ui, sans-serif;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ min-height: 100vh;
+ margin: 0;
+ background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+ color: white;
+ text-align: center;
+ }
+ .container { padding: 2rem; }
+ h1 { font-size: 1.5rem; margin-bottom: 0.5rem; }
+ p { opacity: 0.85; }
+ &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+ &lt;div class="container"&gt;
+ &lt;h1&gt;Embedded Frame&lt;/h1&gt;
+ &lt;p&gt;This HTML page is rendered inside a Docsy &lt;code&gt;iframe&lt;/code&gt; shortcode.&lt;/p&gt;
+ &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;</description></item><item><title>Build a Meshery MCP Tool</title><link>https://meshery-extensions.github.io/tcslabs-academy/pr-preview/pr-57/challenges/deea6061-b6be-49a9-ad1c-f1a5c32e1fa9/build-a-meshery-mcp-tool/lab/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://meshery-extensions.github.io/tcslabs-academy/pr-preview/pr-57/challenges/deea6061-b6be-49a9-ad1c-f1a5c32e1fa9/build-a-meshery-mcp-tool/lab/</guid><description>&lt;h2 id="introduction" class="heading-link"&gt;
+ Introduction
+ &lt;a href="#introduction" class="heading-anchor" aria-label="Permalink to this heading"&gt;🔗&lt;/a&gt;
+&lt;/h2&gt;
+&lt;p&gt;In this challenge you will build a small &lt;a href="https://modelcontextprotocol.io/"&gt;Model Context Protocol&lt;/a&gt;
+(MCP) tool that gives a coding agent a safe, structured view of your &lt;a href="https://meshery.io/"&gt;Meshery&lt;/a&gt;
+and cluster state. You will start &lt;strong&gt;read-only&lt;/strong&gt; - the safe foundation for any agent integration -
+and prove the agent can answer real questions about your infrastructure through your tool.&lt;/p&gt;
+
+&lt;h2 id="prerequisites" class="heading-link"&gt;
+ Prerequisites
+ &lt;a href="#prerequisites" class="heading-anchor" aria-label="Permalink to this heading"&gt;🔗&lt;/a&gt;
+&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;A Kubernetes cluster with &lt;a href="https://docs.meshery.io/"&gt;Meshery&lt;/a&gt; running and connected.&lt;/li&gt;
+&lt;li&gt;A coding agent that supports MCP servers.&lt;/li&gt;
+&lt;li&gt;A language you are comfortable in (any language with an MCP server library works).&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id="step-1---define-one-read-only-tool" class="heading-link"&gt;
+ Step 1 - Define one read-only tool
+ &lt;a href="#step-1---define-one-read-only-tool" class="heading-anchor" aria-label="Permalink to this heading"&gt;🔗&lt;/a&gt;
+&lt;/h2&gt;
+&lt;p&gt;Design a single, well-scoped tool. Good first choice: &lt;code&gt;get_workload_status&lt;/code&gt;.&lt;/p&gt;</description></item><item><title>Build a Meshery MCP Tool - Exam</title><link>https://meshery-extensions.github.io/tcslabs-academy/pr-preview/pr-57/challenges/deea6061-b6be-49a9-ad1c-f1a5c32e1fa9/build-a-meshery-mcp-tool/exam/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://meshery-extensions.github.io/tcslabs-academy/pr-preview/pr-57/challenges/deea6061-b6be-49a9-ad1c-f1a5c32e1fa9/build-a-meshery-mcp-tool/exam/</guid><description/></item><item><title>CAINA Capstone - Exam</title><link>https://meshery-extensions.github.io/tcslabs-academy/pr-preview/pr-57/challenges/deea6061-b6be-49a9-ad1c-f1a5c32e1fa9/caina-capstone/exam/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://meshery-extensions.github.io/tcslabs-academy/pr-preview/pr-57/challenges/deea6061-b6be-49a9-ad1c-f1a5c32e1fa9/caina-capstone/exam/</guid><description/></item><item><title>CAINA Capstone - Generate, Deploy &amp; Validate a Design with an Agent</title><link>https://meshery-extensions.github.io/tcslabs-academy/pr-preview/pr-57/challenges/deea6061-b6be-49a9-ad1c-f1a5c32e1fa9/caina-capstone/lab/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://meshery-extensions.github.io/tcslabs-academy/pr-preview/pr-57/challenges/deea6061-b6be-49a9-ad1c-f1a5c32e1fa9/caina-capstone/lab/</guid><description>&lt;h2 id="introduction" class="heading-link"&gt;
+ Introduction
+ &lt;a href="#introduction" class="heading-anchor" aria-label="Permalink to this heading"&gt;🔗&lt;/a&gt;
+&lt;/h2&gt;
+&lt;p&gt;This is the hands-on capstone for the &lt;strong&gt;Certified AI-Native Infrastructure Associate (CAINA)&lt;/strong&gt;. You
+will take an application from a plain-language brief to a deployed, validated
+&lt;a href="https://meshery.io/"&gt;Meshery&lt;/a&gt; design - using an LLM to generate the design, a coding agent to drive
+the deployment, and Meshery to validate it. This mirrors the everyday loop of an AI-native platform
+engineer: describe intent, let AI draft the infrastructure, then verify before it ships.&lt;/p&gt;</description></item><item><title>CAINP Capstone - Exam</title><link>https://meshery-extensions.github.io/tcslabs-academy/pr-preview/pr-57/challenges/deea6061-b6be-49a9-ad1c-f1a5c32e1fa9/cainp-capstone/exam/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://meshery-extensions.github.io/tcslabs-academy/pr-preview/pr-57/challenges/deea6061-b6be-49a9-ad1c-f1a5c32e1fa9/cainp-capstone/exam/</guid><description/></item><item><title>CAINP Capstone - Operate an AI Workload with Agents &amp; Meshery</title><link>https://meshery-extensions.github.io/tcslabs-academy/pr-preview/pr-57/challenges/deea6061-b6be-49a9-ad1c-f1a5c32e1fa9/cainp-capstone/lab/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://meshery-extensions.github.io/tcslabs-academy/pr-preview/pr-57/challenges/deea6061-b6be-49a9-ad1c-f1a5c32e1fa9/cainp-capstone/lab/</guid><description>&lt;h2 id="introduction" class="heading-link"&gt;
+ Introduction
+ &lt;a href="#introduction" class="heading-anchor" aria-label="Permalink to this heading"&gt;🔗&lt;/a&gt;
+&lt;/h2&gt;
+&lt;p&gt;This is the end-to-end capstone for the &lt;strong&gt;Certified AI-Native Infrastructure Professional (CAINP)&lt;/strong&gt;.
+You will operate a real inference workload the AI-native way: deploy it with &lt;a href="https://meshery.io/"&gt;Meshery&lt;/a&gt;,
+make it observable, give a coding agent safe, audited access to cluster state through a Model Context
+Protocol (MCP) tool, and run an incident-and-remediation loop with a human approving every change.&lt;/p&gt;
+&lt;p&gt;This is the professional loop: not just shipping infrastructure with AI, but &lt;strong&gt;operating&lt;/strong&gt; it with
+AI under guardrails.&lt;/p&gt;</description></item><item><title>Course Test</title><link>https://meshery-extensions.github.io/tcslabs-academy/pr-preview/pr-57/learning-paths/deea6061-b6be-49a9-ad1c-f1a5c32e1fa9/ai-assisted-infrastructure-design-with-meshery-and-kanvas/agent-driven-deployment/test/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://meshery-extensions.github.io/tcslabs-academy/pr-preview/pr-57/learning-paths/deea6061-b6be-49a9-ad1c-f1a5c32e1fa9/ai-assisted-infrastructure-design-with-meshery-and-kanvas/agent-driven-deployment/test/</guid><description/></item><item><title>Course Test</title><link>https://meshery-extensions.github.io/tcslabs-academy/pr-preview/pr-57/learning-paths/deea6061-b6be-49a9-ad1c-f1a5c32e1fa9/ai-assisted-infrastructure-design-with-meshery-and-kanvas/designing-infrastructure-with-ai-and-kanvas/test/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://meshery-extensions.github.io/tcslabs-academy/pr-preview/pr-57/learning-paths/deea6061-b6be-49a9-ad1c-f1a5c32e1fa9/ai-assisted-infrastructure-design-with-meshery-and-kanvas/designing-infrastructure-with-ai-and-kanvas/test/</guid><description/></item><item><title>Course Test</title><link>https://meshery-extensions.github.io/tcslabs-academy/pr-preview/pr-57/learning-paths/deea6061-b6be-49a9-ad1c-f1a5c32e1fa9/ai-assisted-infrastructure-design-with-meshery-and-kanvas/generating-meshery-designs-with-llms/test/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://meshery-extensions.github.io/tcslabs-academy/pr-preview/pr-57/learning-paths/deea6061-b6be-49a9-ad1c-f1a5c32e1fa9/ai-assisted-infrastructure-design-with-meshery-and-kanvas/generating-meshery-designs-with-llms/test/</guid><description/></item><item><title>Course Test</title><link>https://meshery-extensions.github.io/tcslabs-academy/pr-preview/pr-57/learning-paths/deea6061-b6be-49a9-ad1c-f1a5c32e1fa9/ai-assisted-infrastructure-design-with-meshery-and-kanvas/validating-ai-generated-infrastructure/test/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://meshery-extensions.github.io/tcslabs-academy/pr-preview/pr-57/learning-paths/deea6061-b6be-49a9-ad1c-f1a5c32e1fa9/ai-assisted-infrastructure-design-with-meshery-and-kanvas/validating-ai-generated-infrastructure/test/</guid><description/></item><item><title>Course Test</title><link>https://meshery-extensions.github.io/tcslabs-academy/pr-preview/pr-57/learning-paths/deea6061-b6be-49a9-ad1c-f1a5c32e1fa9/ai-engineering-foundations-for-platform-engineers/coding-agents-101/test/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://meshery-extensions.github.io/tcslabs-academy/pr-preview/pr-57/learning-paths/deea6061-b6be-49a9-ad1c-f1a5c32e1fa9/ai-engineering-foundations-for-platform-engineers/coding-agents-101/test/</guid><description/></item><item><title>Course Test</title><link>https://meshery-extensions.github.io/tcslabs-academy/pr-preview/pr-57/learning-paths/deea6061-b6be-49a9-ad1c-f1a5c32e1fa9/ai-engineering-foundations-for-platform-engineers/how-llms-work-for-infrastructure-engineers/test/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://meshery-extensions.github.io/tcslabs-academy/pr-preview/pr-57/learning-paths/deea6061-b6be-49a9-ad1c-f1a5c32e1fa9/ai-engineering-foundations-for-platform-engineers/how-llms-work-for-infrastructure-engineers/test/</guid><description/></item><item><title>Course Test</title><link>https://meshery-extensions.github.io/tcslabs-academy/pr-preview/pr-57/learning-paths/deea6061-b6be-49a9-ad1c-f1a5c32e1fa9/ai-engineering-foundations-for-platform-engineers/prompt-engineering-for-cloud-native-operations/test/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://meshery-extensions.github.io/tcslabs-academy/pr-preview/pr-57/learning-paths/deea6061-b6be-49a9-ad1c-f1a5c32e1fa9/ai-engineering-foundations-for-platform-engineers/prompt-engineering-for-cloud-native-operations/test/</guid><description/></item><item><title>Course Test</title><link>https://meshery-extensions.github.io/tcslabs-academy/pr-preview/pr-57/learning-paths/deea6061-b6be-49a9-ad1c-f1a5c32e1fa9/ai-engineering-foundations-for-platform-engineers/retrieval-and-context-for-infrastructure/test/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://meshery-extensions.github.io/tcslabs-academy/pr-preview/pr-57/learning-paths/deea6061-b6be-49a9-ad1c-f1a5c32e1fa9/ai-engineering-foundations-for-platform-engineers/retrieval-and-context-for-infrastructure/test/</guid><description/></item><item><title>Course Test</title><link>https://meshery-extensions.github.io/tcslabs-academy/pr-preview/pr-57/learning-paths/deea6061-b6be-49a9-ad1c-f1a5c32e1fa9/coding-agents-for-cloud-native-operations/ai-assisted-observability-and-diagnostics/test/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://meshery-extensions.github.io/tcslabs-academy/pr-preview/pr-57/learning-paths/deea6061-b6be-49a9-ad1c-f1a5c32e1fa9/coding-agents-for-cloud-native-operations/ai-assisted-observability-and-diagnostics/test/</guid><description/></item><item><title>Course Test</title><link>https://meshery-extensions.github.io/tcslabs-academy/pr-preview/pr-57/learning-paths/deea6061-b6be-49a9-ad1c-f1a5c32e1fa9/coding-agents-for-cloud-native-operations/automated-remediation-and-self-healing/test/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://meshery-extensions.github.io/tcslabs-academy/pr-preview/pr-57/learning-paths/deea6061-b6be-49a9-ad1c-f1a5c32e1fa9/coding-agents-for-cloud-native-operations/automated-remediation-and-self-healing/test/</guid><description/></item><item><title>Course Test</title><link>https://meshery-extensions.github.io/tcslabs-academy/pr-preview/pr-57/learning-paths/deea6061-b6be-49a9-ad1c-f1a5c32e1fa9/coding-agents-for-cloud-native-operations/incident-response-with-coding-agents/test/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://meshery-extensions.github.io/tcslabs-academy/pr-preview/pr-57/learning-paths/deea6061-b6be-49a9-ad1c-f1a5c32e1fa9/coding-agents-for-cloud-native-operations/incident-response-with-coding-agents/test/</guid><description/></item><item><title>Course Test</title><link>https://meshery-extensions.github.io/tcslabs-academy/pr-preview/pr-57/learning-paths/deea6061-b6be-49a9-ad1c-f1a5c32e1fa9/coding-agents-for-cloud-native-operations/performance-management-with-ai/test/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://meshery-extensions.github.io/tcslabs-academy/pr-preview/pr-57/learning-paths/deea6061-b6be-49a9-ad1c-f1a5c32e1fa9/coding-agents-for-cloud-native-operations/performance-management-with-ai/test/</guid><description/></item><item><title>Course Test</title><link>https://meshery-extensions.github.io/tcslabs-academy/pr-preview/pr-57/learning-paths/deea6061-b6be-49a9-ad1c-f1a5c32e1fa9/foundations-of-cloud-native-management-with-meshery/cloud-native-and-kubernetes-essentials/test/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://meshery-extensions.github.io/tcslabs-academy/pr-preview/pr-57/learning-paths/deea6061-b6be-49a9-ad1c-f1a5c32e1fa9/foundations-of-cloud-native-management-with-meshery/cloud-native-and-kubernetes-essentials/test/</guid><description/></item><item><title>Course Test</title><link>https://meshery-extensions.github.io/tcslabs-academy/pr-preview/pr-57/learning-paths/deea6061-b6be-49a9-ad1c-f1a5c32e1fa9/foundations-of-cloud-native-management-with-meshery/infrastructure-as-designs/test/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://meshery-extensions.github.io/tcslabs-academy/pr-preview/pr-57/learning-paths/deea6061-b6be-49a9-ad1c-f1a5c32e1fa9/foundations-of-cloud-native-management-with-meshery/infrastructure-as-designs/test/</guid><description/></item><item><title>Course Test</title><link>https://meshery-extensions.github.io/tcslabs-academy/pr-preview/pr-57/learning-paths/deea6061-b6be-49a9-ad1c-f1a5c32e1fa9/foundations-of-cloud-native-management-with-meshery/meshery-essentials/test/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://meshery-extensions.github.io/tcslabs-academy/pr-preview/pr-57/learning-paths/deea6061-b6be-49a9-ad1c-f1a5c32e1fa9/foundations-of-cloud-native-management-with-meshery/meshery-essentials/test/</guid><description/></item><item><title>Course Test</title><link>https://meshery-extensions.github.io/tcslabs-academy/pr-preview/pr-57/learning-paths/deea6061-b6be-49a9-ad1c-f1a5c32e1fa9/governance-security-and-responsible-ai-for-infrastructure/compliance-and-evidence/test/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://meshery-extensions.github.io/tcslabs-academy/pr-preview/pr-57/learning-paths/deea6061-b6be-49a9-ad1c-f1a5c32e1fa9/governance-security-and-responsible-ai-for-infrastructure/compliance-and-evidence/test/</guid><description/></item><item><title>Course Test</title><link>https://meshery-extensions.github.io/tcslabs-academy/pr-preview/pr-57/learning-paths/deea6061-b6be-49a9-ad1c-f1a5c32e1fa9/governance-security-and-responsible-ai-for-infrastructure/policy-as-code-with-meshery/test/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://meshery-extensions.github.io/tcslabs-academy/pr-preview/pr-57/learning-paths/deea6061-b6be-49a9-ad1c-f1a5c32e1fa9/governance-security-and-responsible-ai-for-infrastructure/policy-as-code-with-meshery/test/</guid><description/></item><item><title>Course Test</title><link>https://meshery-extensions.github.io/tcslabs-academy/pr-preview/pr-57/learning-paths/deea6061-b6be-49a9-ad1c-f1a5c32e1fa9/governance-security-and-responsible-ai-for-infrastructure/responsible-ai-for-operations/test/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://meshery-extensions.github.io/tcslabs-academy/pr-preview/pr-57/learning-paths/deea6061-b6be-49a9-ad1c-f1a5c32e1fa9/governance-security-and-responsible-ai-for-infrastructure/responsible-ai-for-operations/test/</guid><description/></item><item><title>Course Test</title><link>https://meshery-extensions.github.io/tcslabs-academy/pr-preview/pr-57/learning-paths/deea6061-b6be-49a9-ad1c-f1a5c32e1fa9/governance-security-and-responsible-ai-for-infrastructure/securing-ai-driven-pipelines/test/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://meshery-extensions.github.io/tcslabs-academy/pr-preview/pr-57/learning-paths/deea6061-b6be-49a9-ad1c-f1a5c32e1fa9/governance-security-and-responsible-ai-for-infrastructure/securing-ai-driven-pipelines/test/</guid><description/></item><item><title>Course Test</title><link>https://meshery-extensions.github.io/tcslabs-academy/pr-preview/pr-57/learning-paths/deea6061-b6be-49a9-ad1c-f1a5c32e1fa9/model-context-protocol-and-agentic-integrations-for-meshery/building-mcp-tools-for-meshery/test/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://meshery-extensions.github.io/tcslabs-academy/pr-preview/pr-57/learning-paths/deea6061-b6be-49a9-ad1c-f1a5c32e1fa9/model-context-protocol-and-agentic-integrations-for-meshery/building-mcp-tools-for-meshery/test/</guid><description/></item><item><title>Course Test</title><link>https://meshery-extensions.github.io/tcslabs-academy/pr-preview/pr-57/learning-paths/deea6061-b6be-49a9-ad1c-f1a5c32e1fa9/model-context-protocol-and-agentic-integrations-for-meshery/integrating-coding-agents-with-meshery/test/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://meshery-extensions.github.io/tcslabs-academy/pr-preview/pr-57/learning-paths/deea6061-b6be-49a9-ad1c-f1a5c32e1fa9/model-context-protocol-and-agentic-integrations-for-meshery/integrating-coding-agents-with-meshery/test/</guid><description/></item><item><title>Course Test</title><link>https://meshery-extensions.github.io/tcslabs-academy/pr-preview/pr-57/learning-paths/deea6061-b6be-49a9-ad1c-f1a5c32e1fa9/model-context-protocol-and-agentic-integrations-for-meshery/mcp-fundamentals/test/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://meshery-extensions.github.io/tcslabs-academy/pr-preview/pr-57/learning-paths/deea6061-b6be-49a9-ad1c-f1a5c32e1fa9/model-context-protocol-and-agentic-integrations-for-meshery/mcp-fundamentals/test/</guid><description/></item><item><title>Course Test</title><link>https://meshery-extensions.github.io/tcslabs-academy/pr-preview/pr-57/learning-paths/deea6061-b6be-49a9-ad1c-f1a5c32e1fa9/model-context-protocol-and-agentic-integrations-for-meshery/safe-automation/test/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://meshery-extensions.github.io/tcslabs-academy/pr-preview/pr-57/learning-paths/deea6061-b6be-49a9-ad1c-f1a5c32e1fa9/model-context-protocol-and-agentic-integrations-for-meshery/safe-automation/test/</guid><description/></item><item><title>Heal the Mesh</title><link>https://meshery-extensions.github.io/tcslabs-academy/pr-preview/pr-57/challenges/deea6061-b6be-49a9-ad1c-f1a5c32e1fa9/heal-meshery/lab/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://meshery-extensions.github.io/tcslabs-academy/pr-preview/pr-57/challenges/deea6061-b6be-49a9-ad1c-f1a5c32e1fa9/heal-meshery/lab/</guid><description>&lt;h2 id="introduction" class="heading-link"&gt;
+ Introduction
+ &lt;a href="#introduction" class="heading-anchor" aria-label="Permalink to this heading"&gt;🔗&lt;/a&gt;
+&lt;/h2&gt;
+&lt;p&gt;Real operations is mostly day-2: things break, and you fix them. In this challenge you will
+deliberately break a workload, then use a coding agent grounded in &lt;a href="https://meshery.io/"&gt;Meshery&lt;/a&gt; and
+Kubernetes signals to diagnose and remediate it - safely, with you approving the fix.&lt;/p&gt;
+
+&lt;h2 id="prerequisites" class="heading-link"&gt;
+ Prerequisites
+ &lt;a href="#prerequisites" class="heading-anchor" aria-label="Permalink to this heading"&gt;🔗&lt;/a&gt;
+&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;A Kubernetes cluster with &lt;code&gt;kubectl&lt;/code&gt; and &lt;a href="https://docs.meshery.io/"&gt;Meshery&lt;/a&gt; connected.&lt;/li&gt;
+&lt;li&gt;The academy microservices demo deployed (see the &lt;em&gt;Ship It with an Agent&lt;/em&gt; challenge), or any
+workload you can safely break.&lt;/li&gt;
+&lt;li&gt;A coding agent with shell access.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id="step-1---deploy-a-target" class="heading-link"&gt;
+ Step 1 - Deploy a target
+ &lt;a href="#step-1---deploy-a-target" class="heading-anchor" aria-label="Permalink to this heading"&gt;🔗&lt;/a&gt;
+&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;mesheryctl design import &lt;span style="color:#ae81ff"&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; -f https://raw.githubusercontent.com/meshery-extensions/tcslabs-academy/master/designs/microservices-demo.yaml &lt;span style="color:#ae81ff"&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; -s &lt;span style="color:#e6db74"&gt;&amp;#34;Kubernetes Manifest&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;# deploy via Meshery, then confirm it is healthy:&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;kubectl -n tcslabs-demo rollout status deploy/api
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h2 id="step-2---break-it" class="heading-link"&gt;
+ Step 2 - Break it
+ &lt;a href="#step-2---break-it" class="heading-anchor" aria-label="Permalink to this heading"&gt;🔗&lt;/a&gt;
+&lt;/h2&gt;
+&lt;p&gt;Pick one fault (do not tell the agent which):&lt;/p&gt;</description></item><item><title>Heal the Mesh - Exam</title><link>https://meshery-extensions.github.io/tcslabs-academy/pr-preview/pr-57/challenges/deea6061-b6be-49a9-ad1c-f1a5c32e1fa9/heal-meshery/exam/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://meshery-extensions.github.io/tcslabs-academy/pr-preview/pr-57/challenges/deea6061-b6be-49a9-ad1c-f1a5c32e1fa9/heal-meshery/exam/</guid><description/></item><item><title>Instructor Toolkit</title><link>https://meshery-extensions.github.io/tcslabs-academy/pr-preview/pr-57/instructor-toolkit/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://meshery-extensions.github.io/tcslabs-academy/pr-preview/pr-57/instructor-toolkit/</guid><description>&lt;section class="academy-toolkit academy-toolkit--ready"&gt;
+
+ &lt;p class="academy-toolkit__verdict academy-toolkit__verdict--good"&gt;Ready to publish&lt;/p&gt;&lt;p class="academy-toolkit__summary academy-toolkit__summary--good"&gt;
+ &lt;strong&gt;All publishable content IDs are registered.&lt;/strong&gt;
+ &lt;/p&gt;&lt;p class="academy-toolkit__legend"&gt;
+ &lt;span&gt;&lt;a href="https://platform.tata-consulting.co.uk/academy/instructors-console" target="_blank" rel="noopener" aria-label="Open Instructor Console"&gt;⚠️&lt;/a&gt;Draft page: Content ID is not registered or missing.&lt;/span&gt;
+ &lt;span&gt;&lt;a href="https://platform.tata-consulting.co.uk/academy/instructors-console" target="_blank" rel="noopener" aria-label="Open Instructor Console"&gt;❌&lt;/a&gt;Content ID is not registered or missing.&lt;/span&gt;
+ &lt;span&gt;✅ Content ID is registered.&lt;/span&gt;
+ &lt;/p&gt;&lt;table class="academy-toolkit__table"&gt;
+ &lt;colgroup&gt;
+ &lt;col class="academy-toolkit__col-page"&gt;
+ &lt;col class="academy-toolkit__col-draft"&gt;
+ &lt;col class="academy-toolkit__col-id"&gt;
+ &lt;col class="academy-toolkit__col-status"&gt;
+ &lt;/colgroup&gt;
+ &lt;thead&gt;
+ &lt;tr&gt;
+ &lt;th scope="col"&gt;Page&lt;/th&gt;
+ &lt;th scope="col"&gt;Draft&lt;/th&gt;
+ &lt;th scope="col"&gt;Content ID&lt;/th&gt;
+ &lt;th scope="col"&gt;Status&lt;/th&gt;
+ &lt;/tr&gt;
+ &lt;/thead&gt;
+ &lt;tbody&gt;&lt;tr&gt;
+ &lt;th scope="row"&gt;&lt;a href="https://meshery-extensions.github.io/tcslabs-academy/pr-preview/pr-57/certifications/deea6061-b6be-49a9-ad1c-f1a5c32e1fa9/certified-ai-native-infrastructure-associate/"&gt;Certified AI-Native Infrastructure Associate (CAINA)&lt;/a&gt;&lt;/th&gt;
+ &lt;td&gt;False&lt;/td&gt;
+ &lt;td&gt;ea04bd08-1ec9-4659-a8e7-1b7d67ce0fad&lt;/td&gt;
+ &lt;td&gt;✅&lt;/td&gt;
+ &lt;/tr&gt;&lt;tr&gt;
+ &lt;th scope="row"&gt;&lt;a href="https://platform.tata-consulting.co.uk/academy/learning-paths/deea6061-b6be-49a9-ad1c-f1a5c32e1fa9/foundations-of-cloud-native-management-with-meshery/"&gt;Foundations of Cloud Native Management with Meshery&lt;/a&gt;&lt;/th&gt;
+ &lt;td&gt;True&lt;/td&gt;
+ &lt;td&gt;2355e504-0606-4d1c-9f6f-9f7b07b5ad7d&lt;/td&gt;
+ &lt;td&gt;✅&lt;/td&gt;
+ &lt;/tr&gt;&lt;tr&gt;
+ &lt;th scope="row"&gt;&lt;a href="https://platform.tata-consulting.co.uk/academy/learning-paths/deea6061-b6be-49a9-ad1c-f1a5c32e1fa9/ai-engineering-foundations-for-platform-engineers/"&gt;AI Engineering Foundations for Platform Engineers&lt;/a&gt;&lt;/th&gt;
+ &lt;td&gt;True&lt;/td&gt;
+ &lt;td&gt;f40adb5d-2fc1-42dd-b3e7-96543b676498&lt;/td&gt;
+ &lt;td&gt;✅&lt;/td&gt;
+ &lt;/tr&gt;&lt;tr&gt;
+ &lt;th scope="row"&gt;&lt;a href="https://meshery-extensions.github.io/tcslabs-academy/pr-preview/pr-57/certifications/deea6061-b6be-49a9-ad1c-f1a5c32e1fa9/certified-ai-native-infrastructure-professional/"&gt;Certified AI-Native Infrastructure Professional (CAINP)&lt;/a&gt;&lt;/th&gt;
+ &lt;td&gt;False&lt;/td&gt;
+ &lt;td&gt;303d4cc4-6523-41e7-8c4d-784af813f0bc&lt;/td&gt;
+ &lt;td&gt;✅&lt;/td&gt;
+ &lt;/tr&gt;&lt;tr&gt;
+ &lt;th scope="row"&gt;&lt;a href="https://platform.tata-consulting.co.uk/academy/learning-paths/deea6061-b6be-49a9-ad1c-f1a5c32e1fa9/ai-assisted-infrastructure-design-with-meshery-and-kanvas/"&gt;AI-Assisted Infrastructure Design with Meshery &amp;amp; Kanvas&lt;/a&gt;&lt;/th&gt;
+ &lt;td&gt;True&lt;/td&gt;
+ &lt;td&gt;5d26d3ec-ddfb-46f7-9684-b56e9b567564&lt;/td&gt;
+ &lt;td&gt;✅&lt;/td&gt;
+ &lt;/tr&gt;&lt;tr&gt;
+ &lt;th scope="row"&gt;&lt;a href="https://meshery-extensions.github.io/tcslabs-academy/pr-preview/pr-57/learning-paths/deea6061-b6be-49a9-ad1c-f1a5c32e1fa9/coding-agents-for-cloud-native-operations/"&gt;Coding Agents for Cloud Native Operations (Day-2)&lt;/a&gt;&lt;/th&gt;
+ &lt;td&gt;True&lt;/td&gt;
+ &lt;td&gt;48f92ba8-a5f3-4ed9-ac05-2292822b3b4c&lt;/td&gt;
+ &lt;td&gt;✅&lt;/td&gt;
+ &lt;/tr&gt;&lt;tr&gt;
+ &lt;th scope="row"&gt;&lt;a href="https://meshery-extensions.github.io/tcslabs-academy/pr-preview/pr-57/learning-paths/deea6061-b6be-49a9-ad1c-f1a5c32e1fa9/model-context-protocol-and-agentic-integrations-for-meshery/"&gt;Model Context Protocol &amp;amp; Agentic Integrations for Meshery&lt;/a&gt;&lt;/th&gt;
+ &lt;td&gt;False&lt;/td&gt;
+ &lt;td&gt;67beb26c-ed9d-4139-ba57-c084acaf84e4&lt;/td&gt;
+ &lt;td&gt;✅&lt;/td&gt;
+ &lt;/tr&gt;&lt;tr&gt;
+ &lt;th scope="row"&gt;&lt;a href="https://meshery-extensions.github.io/tcslabs-academy/pr-preview/pr-57/learning-paths/deea6061-b6be-49a9-ad1c-f1a5c32e1fa9/governance-security-and-responsible-ai-for-infrastructure/"&gt;Governance, Security &amp;amp; Responsible AI for Infrastructure&lt;/a&gt;&lt;/th&gt;
+ &lt;td&gt;False&lt;/td&gt;
+ &lt;td&gt;313d3415-e08f-43cb-873f-c23ac78dbcde&lt;/td&gt;
+ &lt;td&gt;✅&lt;/td&gt;
+ &lt;/tr&gt;&lt;tr&gt;
+ &lt;th scope="row"&gt;&lt;a href="https://meshery-extensions.github.io/tcslabs-academy/pr-preview/pr-57/challenges/deea6061-b6be-49a9-ad1c-f1a5c32e1fa9/build-a-meshery-mcp-tool/"&gt;Build a Meshery MCP Tool&lt;/a&gt;&lt;/th&gt;
+ &lt;td&gt;False&lt;/td&gt;
+ &lt;td&gt;64e5cfd6-88cf-4f54-a10d-f994461d510b&lt;/td&gt;
+ &lt;td&gt;✅&lt;/td&gt;
+ &lt;/tr&gt;&lt;tr&gt;
+ &lt;th scope="row"&gt;&lt;a href="https://meshery-extensions.github.io/tcslabs-academy/pr-preview/pr-57/challenges/deea6061-b6be-49a9-ad1c-f1a5c32e1fa9/caina-capstone/"&gt;CAINA Capstone - Generate, Deploy &amp;amp; Validate a Design with an Agent&lt;/a&gt;&lt;/th&gt;
+ &lt;td&gt;False&lt;/td&gt;
+ &lt;td&gt;381b26f7-4b35-4558-8257-145664a3b9d8&lt;/td&gt;
+ &lt;td&gt;✅&lt;/td&gt;
+ &lt;/tr&gt;&lt;tr&gt;
+ &lt;th scope="row"&gt;&lt;a href="https://meshery-extensions.github.io/tcslabs-academy/pr-preview/pr-57/challenges/deea6061-b6be-49a9-ad1c-f1a5c32e1fa9/cainp-capstone/"&gt;CAINP Capstone - Operate an AI Workload with Agents &amp;amp; Meshery&lt;/a&gt;&lt;/th&gt;
+ &lt;td&gt;False&lt;/td&gt;
+ &lt;td&gt;73d9b746-5207-4209-ace6-3de5b8ad30c3&lt;/td&gt;
+ &lt;td&gt;✅&lt;/td&gt;
+ &lt;/tr&gt;&lt;tr&gt;
+ &lt;th scope="row"&gt;&lt;a href="https://meshery-extensions.github.io/tcslabs-academy/pr-preview/pr-57/challenges/deea6061-b6be-49a9-ad1c-f1a5c32e1fa9/heal-meshery/"&gt;Heal Meshery&lt;/a&gt;&lt;/th&gt;
+ &lt;td&gt;False&lt;/td&gt;
+ &lt;td&gt;98081c58-176d-47eb-8ae5-959544b909df&lt;/td&gt;
+ &lt;td&gt;✅&lt;/td&gt;
+ &lt;/tr&gt;&lt;tr&gt;
+ &lt;th scope="row"&gt;&lt;a href="https://meshery-extensions.github.io/tcslabs-academy/pr-preview/pr-57/challenges/deea6061-b6be-49a9-ad1c-f1a5c32e1fa9/ship-it-with-an-agent/"&gt;Ship It with an Agent&lt;/a&gt;&lt;/th&gt;
+ &lt;td&gt;False&lt;/td&gt;
+ &lt;td&gt;e726b451-2619-456e-badd-6947c29d311e&lt;/td&gt;
+ &lt;td&gt;✅&lt;/td&gt;
+ &lt;/tr&gt;&lt;/tbody&gt;
+ &lt;/table&gt;&lt;/section&gt;
+
+&lt;style&gt;
+ .academy-toolkit {
+ max-width: 960px;
+ margin-top: 1.5rem;
+ color: #182126;
+ }
+
+ .academy-toolkit__header {
+ margin-bottom: 0.75rem;
+ }
+
+ .academy-toolkit h2 {
+ margin: 0;
+ font-size: 1.45rem;
+ }
+
+ .academy-toolkit__empty {
+ margin: 0;
+ color: #52616b;
+ }
+
+ .academy-toolkit__summary-row {
+ display: flex;
+ flex-wrap: wrap;
+ gap: 0.75rem 1rem;
+ align-items: center;
+ margin-bottom: 0.75rem;
+ }
+
+ .academy-toolkit__summary {
+ display: inline-flex;
+ align-items: center;
+ margin: 0;
+ font-size: 1.15rem;
+ }
+
+ .academy-toolkit__legend {
+ display: flex;
+ flex-wrap: wrap;
+ gap: 0.5rem 1.25rem;
+ margin: 0 0 0.75rem;
+ color: #52616b;
+ font-size: 0.95rem;
+ }
+
+ .academy-toolkit__legend span {
+ white-space: nowrap;
+ }
+
+ .academy-toolkit__action {
+ margin: 0.85rem 0 0.75rem;
+ color: #182126;
+ font-size: 1rem;
+ }
+
+ .academy-toolkit__action a {
+ color: #00b39f;
+ }
+
+ .academy-toolkit__verdict {
+ margin: 0.9rem 0 0.25rem;
+ font-size: 1.55rem;
+ font-weight: 800;
+ line-height: 1.2;
+ }
+
+ .academy-toolkit a {
+ color: #00b39f;
+ text-decoration: none;
+ }
+
+ .academy-toolkit a:hover,
+ .academy-toolkit a:focus {
+ color: rgba(0, 179, 159, 0.7);
+ }
+
+ .academy-toolkit__table {
+ width: 100%;
+ border-collapse: collapse;
+ }
+
+ .academy-toolkit__table th:nth-child(3),
+ .academy-toolkit__table td:nth-child(3) {
+ padding-right: 4rem !important; 
+ }
+
+ .academy-toolkit__col-draft {
+ width: 10%;
+ }
+
+ .academy-toolkit__table th,
+ .academy-toolkit__table td {
+ padding: 0.55rem 0.75rem;
+ text-align: left;
+ vertical-align: top;
+ }
+
+ .academy-toolkit__table thead th {
+ color: #52616b;
+ font-size: 0.85rem;
+ font-weight: 700;
+ }
+
+ .academy-toolkit__table tbody th {
+ font-weight: 500;
+ }
+
+ .academy-toolkit__table tbody th a {
+ font-weight: inherit;
+ }
+
+ .academy-toolkit__table tbody td a {
+ text-decoration: none;
+ }
+
+ .academy-toolkit__table tbody td:last-child {
+ white-space: nowrap;
+ }
+&lt;/style&gt;</description></item><item><title>Learning Path Exam</title><link>https://meshery-extensions.github.io/tcslabs-academy/pr-preview/pr-57/learning-paths/deea6061-b6be-49a9-ad1c-f1a5c32e1fa9/ai-assisted-infrastructure-design-with-meshery-and-kanvas/exam/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://meshery-extensions.github.io/tcslabs-academy/pr-preview/pr-57/learning-paths/deea6061-b6be-49a9-ad1c-f1a5c32e1fa9/ai-assisted-infrastructure-design-with-meshery-and-kanvas/exam/</guid><description/></item><item><title>Learning Path Exam</title><link>https://meshery-extensions.github.io/tcslabs-academy/pr-preview/pr-57/learning-paths/deea6061-b6be-49a9-ad1c-f1a5c32e1fa9/ai-engineering-foundations-for-platform-engineers/exam/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://meshery-extensions.github.io/tcslabs-academy/pr-preview/pr-57/learning-paths/deea6061-b6be-49a9-ad1c-f1a5c32e1fa9/ai-engineering-foundations-for-platform-engineers/exam/</guid><description/></item><item><title>Learning Path Exam</title><link>https://meshery-extensions.github.io/tcslabs-academy/pr-preview/pr-57/learning-paths/deea6061-b6be-49a9-ad1c-f1a5c32e1fa9/coding-agents-for-cloud-native-operations/exam/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://meshery-extensions.github.io/tcslabs-academy/pr-preview/pr-57/learning-paths/deea6061-b6be-49a9-ad1c-f1a5c32e1fa9/coding-agents-for-cloud-native-operations/exam/</guid><description/></item><item><title>Learning Path Exam</title><link>https://meshery-extensions.github.io/tcslabs-academy/pr-preview/pr-57/learning-paths/deea6061-b6be-49a9-ad1c-f1a5c32e1fa9/foundations-of-cloud-native-management-with-meshery/exam/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://meshery-extensions.github.io/tcslabs-academy/pr-preview/pr-57/learning-paths/deea6061-b6be-49a9-ad1c-f1a5c32e1fa9/foundations-of-cloud-native-management-with-meshery/exam/</guid><description/></item><item><title>Learning Path Exam</title><link>https://meshery-extensions.github.io/tcslabs-academy/pr-preview/pr-57/learning-paths/deea6061-b6be-49a9-ad1c-f1a5c32e1fa9/governance-security-and-responsible-ai-for-infrastructure/exam/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://meshery-extensions.github.io/tcslabs-academy/pr-preview/pr-57/learning-paths/deea6061-b6be-49a9-ad1c-f1a5c32e1fa9/governance-security-and-responsible-ai-for-infrastructure/exam/</guid><description/></item><item><title>Learning Path Exam</title><link>https://meshery-extensions.github.io/tcslabs-academy/pr-preview/pr-57/learning-paths/deea6061-b6be-49a9-ad1c-f1a5c32e1fa9/model-context-protocol-and-agentic-integrations-for-meshery/exam/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://meshery-extensions.github.io/tcslabs-academy/pr-preview/pr-57/learning-paths/deea6061-b6be-49a9-ad1c-f1a5c32e1fa9/model-context-protocol-and-agentic-integrations-for-meshery/exam/</guid><description/></item><item><title>Module Quiz</title><link>https://meshery-extensions.github.io/tcslabs-academy/pr-preview/pr-57/learning-paths/deea6061-b6be-49a9-ad1c-f1a5c32e1fa9/ai-assisted-infrastructure-design-with-meshery-and-kanvas/agent-driven-deployment/deploying-with-agents/quiz/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://meshery-extensions.github.io/tcslabs-academy/pr-preview/pr-57/learning-paths/deea6061-b6be-49a9-ad1c-f1a5c32e1fa9/ai-assisted-infrastructure-design-with-meshery-and-kanvas/agent-driven-deployment/deploying-with-agents/quiz/</guid><description/></item><item><title>Module Quiz</title><link>https://meshery-extensions.github.io/tcslabs-academy/pr-preview/pr-57/learning-paths/deea6061-b6be-49a9-ad1c-f1a5c32e1fa9/ai-assisted-infrastructure-design-with-meshery-and-kanvas/designing-infrastructure-with-ai-and-kanvas/from-intent-to-design/quiz/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://meshery-extensions.github.io/tcslabs-academy/pr-preview/pr-57/learning-paths/deea6061-b6be-49a9-ad1c-f1a5c32e1fa9/ai-assisted-infrastructure-design-with-meshery-and-kanvas/designing-infrastructure-with-ai-and-kanvas/from-intent-to-design/quiz/</guid><description/></item><item><title>Module Quiz</title><link>https://meshery-extensions.github.io/tcslabs-academy/pr-preview/pr-57/learning-paths/deea6061-b6be-49a9-ad1c-f1a5c32e1fa9/ai-assisted-infrastructure-design-with-meshery-and-kanvas/generating-meshery-designs-with-llms/generating-designs/quiz/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://meshery-extensions.github.io/tcslabs-academy/pr-preview/pr-57/learning-paths/deea6061-b6be-49a9-ad1c-f1a5c32e1fa9/ai-assisted-infrastructure-design-with-meshery-and-kanvas/generating-meshery-designs-with-llms/generating-designs/quiz/</guid><description/></item><item><title>Module Quiz</title><link>https://meshery-extensions.github.io/tcslabs-academy/pr-preview/pr-57/learning-paths/deea6061-b6be-49a9-ad1c-f1a5c32e1fa9/ai-assisted-infrastructure-design-with-meshery-and-kanvas/validating-ai-generated-infrastructure/validation-and-guardrails/quiz/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://meshery-extensions.github.io/tcslabs-academy/pr-preview/pr-57/learning-paths/deea6061-b6be-49a9-ad1c-f1a5c32e1fa9/ai-assisted-infrastructure-design-with-meshery-and-kanvas/validating-ai-generated-infrastructure/validation-and-guardrails/quiz/</guid><description/></item><item><title>Module Quiz</title><link>https://meshery-extensions.github.io/tcslabs-academy/pr-preview/pr-57/learning-paths/deea6061-b6be-49a9-ad1c-f1a5c32e1fa9/ai-engineering-foundations-for-platform-engineers/coding-agents-101/agents/quiz/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://meshery-extensions.github.io/tcslabs-academy/pr-preview/pr-57/learning-paths/deea6061-b6be-49a9-ad1c-f1a5c32e1fa9/ai-engineering-foundations-for-platform-engineers/coding-agents-101/agents/quiz/</guid><description/></item><item><title>Module Quiz</title><link>https://meshery-extensions.github.io/tcslabs-academy/pr-preview/pr-57/learning-paths/deea6061-b6be-49a9-ad1c-f1a5c32e1fa9/ai-engineering-foundations-for-platform-engineers/how-llms-work-for-infrastructure-engineers/llm-basics/quiz/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://meshery-extensions.github.io/tcslabs-academy/pr-preview/pr-57/learning-paths/deea6061-b6be-49a9-ad1c-f1a5c32e1fa9/ai-engineering-foundations-for-platform-engineers/how-llms-work-for-infrastructure-engineers/llm-basics/quiz/</guid><description/></item><item><title>Module Quiz</title><link>https://meshery-extensions.github.io/tcslabs-academy/pr-preview/pr-57/learning-paths/deea6061-b6be-49a9-ad1c-f1a5c32e1fa9/ai-engineering-foundations-for-platform-engineers/prompt-engineering-for-cloud-native-operations/prompting/quiz/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://meshery-extensions.github.io/tcslabs-academy/pr-preview/pr-57/learning-paths/deea6061-b6be-49a9-ad1c-f1a5c32e1fa9/ai-engineering-foundations-for-platform-engineers/prompt-engineering-for-cloud-native-operations/prompting/quiz/</guid><description/></item><item><title>Module Quiz</title><link>https://meshery-extensions.github.io/tcslabs-academy/pr-preview/pr-57/learning-paths/deea6061-b6be-49a9-ad1c-f1a5c32e1fa9/ai-engineering-foundations-for-platform-engineers/retrieval-and-context-for-infrastructure/rag/quiz/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://meshery-extensions.github.io/tcslabs-academy/pr-preview/pr-57/learning-paths/deea6061-b6be-49a9-ad1c-f1a5c32e1fa9/ai-engineering-foundations-for-platform-engineers/retrieval-and-context-for-infrastructure/rag/quiz/</guid><description/></item><item><title>Module Quiz</title><link>https://meshery-extensions.github.io/tcslabs-academy/pr-preview/pr-57/learning-paths/deea6061-b6be-49a9-ad1c-f1a5c32e1fa9/coding-agents-for-cloud-native-operations/ai-assisted-observability-and-diagnostics/observe/quiz/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://meshery-extensions.github.io/tcslabs-academy/pr-preview/pr-57/learning-paths/deea6061-b6be-49a9-ad1c-f1a5c32e1fa9/coding-agents-for-cloud-native-operations/ai-assisted-observability-and-diagnostics/observe/quiz/</guid><description/></item><item><title>Module Quiz</title><link>https://meshery-extensions.github.io/tcslabs-academy/pr-preview/pr-57/learning-paths/deea6061-b6be-49a9-ad1c-f1a5c32e1fa9/coding-agents-for-cloud-native-operations/automated-remediation-and-self-healing/remediate/quiz/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://meshery-extensions.github.io/tcslabs-academy/pr-preview/pr-57/learning-paths/deea6061-b6be-49a9-ad1c-f1a5c32e1fa9/coding-agents-for-cloud-native-operations/automated-remediation-and-self-healing/remediate/quiz/</guid><description/></item><item><title>Module Quiz</title><link>https://meshery-extensions.github.io/tcslabs-academy/pr-preview/pr-57/learning-paths/deea6061-b6be-49a9-ad1c-f1a5c32e1fa9/coding-agents-for-cloud-native-operations/incident-response-with-coding-agents/respond/quiz/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://meshery-extensions.github.io/tcslabs-academy/pr-preview/pr-57/learning-paths/deea6061-b6be-49a9-ad1c-f1a5c32e1fa9/coding-agents-for-cloud-native-operations/incident-response-with-coding-agents/respond/quiz/</guid><description/></item><item><title>Module Quiz</title><link>https://meshery-extensions.github.io/tcslabs-academy/pr-preview/pr-57/learning-paths/deea6061-b6be-49a9-ad1c-f1a5c32e1fa9/coding-agents-for-cloud-native-operations/performance-management-with-ai/perf/quiz/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://meshery-extensions.github.io/tcslabs-academy/pr-preview/pr-57/learning-paths/deea6061-b6be-49a9-ad1c-f1a5c32e1fa9/coding-agents-for-cloud-native-operations/performance-management-with-ai/perf/quiz/</guid><description/></item><item><title>Module Quiz</title><link>https://meshery-extensions.github.io/tcslabs-academy/pr-preview/pr-57/learning-paths/deea6061-b6be-49a9-ad1c-f1a5c32e1fa9/foundations-of-cloud-native-management-with-meshery/cloud-native-and-kubernetes-essentials/foundations/quiz/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://meshery-extensions.github.io/tcslabs-academy/pr-preview/pr-57/learning-paths/deea6061-b6be-49a9-ad1c-f1a5c32e1fa9/foundations-of-cloud-native-management-with-meshery/cloud-native-and-kubernetes-essentials/foundations/quiz/</guid><description/></item><item><title>Module Quiz</title><link>https://meshery-extensions.github.io/tcslabs-academy/pr-preview/pr-57/learning-paths/deea6061-b6be-49a9-ad1c-f1a5c32e1fa9/foundations-of-cloud-native-management-with-meshery/infrastructure-as-designs/designs/quiz/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://meshery-extensions.github.io/tcslabs-academy/pr-preview/pr-57/learning-paths/deea6061-b6be-49a9-ad1c-f1a5c32e1fa9/foundations-of-cloud-native-management-with-meshery/infrastructure-as-designs/designs/quiz/</guid><description/></item><item><title>Module Quiz</title><link>https://meshery-extensions.github.io/tcslabs-academy/pr-preview/pr-57/learning-paths/deea6061-b6be-49a9-ad1c-f1a5c32e1fa9/foundations-of-cloud-native-management-with-meshery/meshery-essentials/orientation/quiz/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://meshery-extensions.github.io/tcslabs-academy/pr-preview/pr-57/learning-paths/deea6061-b6be-49a9-ad1c-f1a5c32e1fa9/foundations-of-cloud-native-management-with-meshery/meshery-essentials/orientation/quiz/</guid><description/></item><item><title>Module Quiz</title><link>https://meshery-extensions.github.io/tcslabs-academy/pr-preview/pr-57/learning-paths/deea6061-b6be-49a9-ad1c-f1a5c32e1fa9/governance-security-and-responsible-ai-for-infrastructure/compliance-and-evidence/compliance/quiz/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://meshery-extensions.github.io/tcslabs-academy/pr-preview/pr-57/learning-paths/deea6061-b6be-49a9-ad1c-f1a5c32e1fa9/governance-security-and-responsible-ai-for-infrastructure/compliance-and-evidence/compliance/quiz/</guid><description/></item><item><title>Module Quiz</title><link>https://meshery-extensions.github.io/tcslabs-academy/pr-preview/pr-57/learning-paths/deea6061-b6be-49a9-ad1c-f1a5c32e1fa9/governance-security-and-responsible-ai-for-infrastructure/policy-as-code-with-meshery/policy/quiz/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://meshery-extensions.github.io/tcslabs-academy/pr-preview/pr-57/learning-paths/deea6061-b6be-49a9-ad1c-f1a5c32e1fa9/governance-security-and-responsible-ai-for-infrastructure/policy-as-code-with-meshery/policy/quiz/</guid><description/></item><item><title>Module Quiz</title><link>https://meshery-extensions.github.io/tcslabs-academy/pr-preview/pr-57/learning-paths/deea6061-b6be-49a9-ad1c-f1a5c32e1fa9/governance-security-and-responsible-ai-for-infrastructure/responsible-ai-for-operations/responsible-ai/quiz/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://meshery-extensions.github.io/tcslabs-academy/pr-preview/pr-57/learning-paths/deea6061-b6be-49a9-ad1c-f1a5c32e1fa9/governance-security-and-responsible-ai-for-infrastructure/responsible-ai-for-operations/responsible-ai/quiz/</guid><description/></item><item><title>Module Quiz</title><link>https://meshery-extensions.github.io/tcslabs-academy/pr-preview/pr-57/learning-paths/deea6061-b6be-49a9-ad1c-f1a5c32e1fa9/governance-security-and-responsible-ai-for-infrastructure/securing-ai-driven-pipelines/secure/quiz/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://meshery-extensions.github.io/tcslabs-academy/pr-preview/pr-57/learning-paths/deea6061-b6be-49a9-ad1c-f1a5c32e1fa9/governance-security-and-responsible-ai-for-infrastructure/securing-ai-driven-pipelines/secure/quiz/</guid><description/></item><item><title>Module Quiz</title><link>https://meshery-extensions.github.io/tcslabs-academy/pr-preview/pr-57/learning-paths/deea6061-b6be-49a9-ad1c-f1a5c32e1fa9/model-context-protocol-and-agentic-integrations-for-meshery/building-mcp-tools-for-meshery/build-mcp/quiz/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://meshery-extensions.github.io/tcslabs-academy/pr-preview/pr-57/learning-paths/deea6061-b6be-49a9-ad1c-f1a5c32e1fa9/model-context-protocol-and-agentic-integrations-for-meshery/building-mcp-tools-for-meshery/build-mcp/quiz/</guid><description/></item><item><title>Module Quiz</title><link>https://meshery-extensions.github.io/tcslabs-academy/pr-preview/pr-57/learning-paths/deea6061-b6be-49a9-ad1c-f1a5c32e1fa9/model-context-protocol-and-agentic-integrations-for-meshery/integrating-coding-agents-with-meshery/integrate/quiz/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://meshery-extensions.github.io/tcslabs-academy/pr-preview/pr-57/learning-paths/deea6061-b6be-49a9-ad1c-f1a5c32e1fa9/model-context-protocol-and-agentic-integrations-for-meshery/integrating-coding-agents-with-meshery/integrate/quiz/</guid><description/></item><item><title>Module Quiz</title><link>https://meshery-extensions.github.io/tcslabs-academy/pr-preview/pr-57/learning-paths/deea6061-b6be-49a9-ad1c-f1a5c32e1fa9/model-context-protocol-and-agentic-integrations-for-meshery/mcp-fundamentals/mcp-basics/quiz/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://meshery-extensions.github.io/tcslabs-academy/pr-preview/pr-57/learning-paths/deea6061-b6be-49a9-ad1c-f1a5c32e1fa9/model-context-protocol-and-agentic-integrations-for-meshery/mcp-fundamentals/mcp-basics/quiz/</guid><description/></item><item><title>Module Quiz</title><link>https://meshery-extensions.github.io/tcslabs-academy/pr-preview/pr-57/learning-paths/deea6061-b6be-49a9-ad1c-f1a5c32e1fa9/model-context-protocol-and-agentic-integrations-for-meshery/safe-automation/safe-automation/quiz/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://meshery-extensions.github.io/tcslabs-academy/pr-preview/pr-57/learning-paths/deea6061-b6be-49a9-ad1c-f1a5c32e1fa9/model-context-protocol-and-agentic-integrations-for-meshery/safe-automation/safe-automation/quiz/</guid><description/></item><item><title>Ship It with an Agent</title><link>https://meshery-extensions.github.io/tcslabs-academy/pr-preview/pr-57/challenges/deea6061-b6be-49a9-ad1c-f1a5c32e1fa9/ship-it-with-an-agent/lab/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://meshery-extensions.github.io/tcslabs-academy/pr-preview/pr-57/challenges/deea6061-b6be-49a9-ad1c-f1a5c32e1fa9/ship-it-with-an-agent/lab/</guid><description>&lt;h2 id="introduction" class="heading-link"&gt;
+ Introduction
+ &lt;a href="#introduction" class="heading-anchor" aria-label="Permalink to this heading"&gt;🔗&lt;/a&gt;
+&lt;/h2&gt;
+&lt;p&gt;In this challenge you will deploy a small microservices application using a coding agent and
+&lt;a href="https://meshery.io/"&gt;Meshery&lt;/a&gt;. It is the warm-up for the
+&lt;a href="https://platform.tata-consulting.co.uk/academy/certifications/25d5053d-9be3-4af2-98dc-fcc3cf1cc4e1/certified-ai-native-infrastructure-associate/"&gt;CAINA&lt;/a&gt;
+credential: a complete, low-risk run through the design-to-deploy loop.&lt;/p&gt;
+
+&lt;h2 id="prerequisites" class="heading-link"&gt;
+ Prerequisites
+ &lt;a href="#prerequisites" class="heading-anchor" aria-label="Permalink to this heading"&gt;🔗&lt;/a&gt;
+&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;A Kubernetes cluster (kind, k3d, minikube, or managed) with &lt;code&gt;kubectl&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://docs.meshery.io/"&gt;Meshery&lt;/a&gt; running (&lt;code&gt;mesheryctl system start&lt;/code&gt;) and connected.&lt;/li&gt;
+&lt;li&gt;A coding agent with shell access.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id="step-1---import-the-design" class="heading-link"&gt;
+ Step 1 - Import the design
+ &lt;a href="#step-1---import-the-design" class="heading-anchor" aria-label="Permalink to this heading"&gt;🔗&lt;/a&gt;
+&lt;/h2&gt;
+&lt;p&gt;Use the academy&amp;rsquo;s microservices demo design:&lt;/p&gt;</description></item><item><title>Ship It with an Agent - Exam</title><link>https://meshery-extensions.github.io/tcslabs-academy/pr-preview/pr-57/challenges/deea6061-b6be-49a9-ad1c-f1a5c32e1fa9/ship-it-with-an-agent/exam/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://meshery-extensions.github.io/tcslabs-academy/pr-preview/pr-57/challenges/deea6061-b6be-49a9-ad1c-f1a5c32e1fa9/ship-it-with-an-agent/exam/</guid><description/></item></channel></rss>
