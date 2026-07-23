@@ -18,11 +18,20 @@
 <a href="LICENSE"><img src="https://img.shields.io/github/license/meshery-extensions/tcslabs-academy?style=flat-square" alt="Apache 2.0 License"></a>  <img alt="GitHub go.mod Go version" src="https://img.shields.io/github/go-mod/go-version/meshery-extensions/meshery-academy">
 </p>
 
-<img src=".github/assets/images/readme/tcslabs-academy-color.svg"
-       width="50"
-       alt="Academy"
-       align="left"
-       style="margin-right:15px;" />
+<picture align="left">
+  <source
+    media="(prefers-color-scheme: dark)"
+    srcset=".github/assets/images/readme/tcslabs-academy-color.svg">
+  <source
+    media="(prefers-color-scheme: light)"
+    srcset=".github/assets/images/readme/tcslabs-academy-white.svg">
+  <img
+    src=".github/assets/images/readme/tcslabs-academy-color.svg"
+    width="50"
+    alt="Academy"
+    align="left"
+    style="margin-right:15px;" />
+</picture>
 
 # TCS Labs Academy
 
@@ -297,14 +306,10 @@ Contributors are expected to follow the [CNCF Code of Conduct](https://github.co
 <p>
 <a href="https://slack.meshery.io">
 
-<picture align="right">
-  <source media="(prefers-color-scheme: dark)" srcset=".github/assets/images/readme/slack.svg">
-  <source media="(prefers-color-scheme: light)" srcset=".github/assets/images/readme/slack.svg">
-  <img src=".github/assets/images/readme/slack.svg"
-       width="120"
-       align="right"
-       alt="Join Meshery Slack">
-</picture>
+<img src=".github/assets/images/readme/slack.svg"
+     width="120"
+     align="right"
+     alt="Join Meshery Slack">
 
 </a>
 
