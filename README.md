@@ -1,9 +1,37 @@
-<div align="center">
-  <img src=".github/assets/images/meshery/meshery-logo-dark-text-side.svg" width="70%" /> <br />
-  <img src="https://img.shields.io/badge/Meshery-Academy-00B39F?style=flat-square&logo=meshery&logoColor=white" />
-<img alt="GitHub go.mod Go version" src="https://img.shields.io/github/go-mod/go-version/meshery-extensions/meshery-academy">
+<p align="center">
+  <picture>
+    <source
+      media="(prefers-color-scheme: dark)"
+      srcset=".github/assets/images/meshery/meshery-logo-dark-text-side.svg">
+    <source
+      media="(prefers-color-scheme: light)"
+      srcset=".github/assets/images/meshery/meshery-logo-light-text-side.svg">
+    <img
+      src=".github/assets/images/meshery/meshery-logo-light-text-side.svg"
+      width="45%"
+      alt="Meshery Logo">
+  </picture>
+</p>
 
-</div>
+<p align="center">
+<a href="https://layer5.io/learn/academy"><img src="https://img.shields.io/badge/Meshery-Academy-00B39F?style=flat-square&logo=meshery&logoColor=white"   alt="Meshery Academy"></a>
+<a href="LICENSE"><img src="https://img.shields.io/github/license/meshery-extensions/tcslabs-academy?style=flat-square" alt="Apache 2.0 License"></a>  <img alt="GitHub go.mod Go version" src="https://img.shields.io/github/go-mod/go-version/meshery-extensions/meshery-academy">
+</p>
+
+<picture align="left">
+  <source
+    media="(prefers-color-scheme: dark)"
+    srcset=".github/assets/images/readme/tcslabs-academy-color.svg">
+  <source
+    media="(prefers-color-scheme: light)"
+    srcset=".github/assets/images/readme/tcslabs-academy-white.svg">
+  <img
+    src=".github/assets/images/readme/tcslabs-academy-color.svg"
+    width="50"
+    alt="Academy"
+    align="left"
+    style="margin-right:15px;" />
+</picture>
 
 # TCS Labs Academy
 
@@ -265,3 +293,40 @@ Find other related academies by browsing the "[meshery-academy](https://github.c
 ## 📄 License
 
 This repository is available as open source under the terms of the [Apache 2.0 License](./LICENSE).
+
+---
+       
+## 👥 Community & Contributions
+
+We warmly welcome all contributors! As you get started, please review this project's [contributing guidelines](CONTRIBUTING.md).
+
+
+Contributors are expected to follow the [CNCF Code of Conduct](https://github.com/cncf/foundation/blob/master/code-of-conduct.md).
+
+<p>
+<a href="https://slack.meshery.io">
+
+<img src=".github/assets/images/readme/slack.svg"
+     width="120"
+     align="right"
+     alt="Join Meshery Slack">
+
+</a>
+
+<a href="https://meshery.io/community">
+  <img src=".github/assets/images/readme/community.svg"
+       width="140"
+       align="left"
+       style="margin-right:10px;"
+       alt="Meshery Community">
+</a>
+
+✔️ <em><strong>Join</strong></em> the <a href="https://slack.meshery.io">Meshery Slack Community</a>.<br />
+✔️ <em><strong>Discuss</strong></em> in the <a href="https://discuss.meshery.io/">Community Forum</a>.<br />
+✔️ <em><strong>Explore</strong></em> the <a href="https://discuss.meshery.io/c/community/12">Meshery Community Discussions</a>.<br />
+✔️ <em><strong>Get Started</strong></em> with <a href="https://meshery.io/#getting-started">Meshery</a>.<br />
+
+</p>
+
+<br clear="both" />
+
