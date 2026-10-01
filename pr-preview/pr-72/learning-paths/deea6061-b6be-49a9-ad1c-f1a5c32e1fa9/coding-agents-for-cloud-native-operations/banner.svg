@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 220" role="img" aria-label="TCS Labs Academy">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0b1f2a"/>
+      <stop offset="1" stop-color="#123642"/>
+    </linearGradient>
+    <linearGradient id="teal" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#00d3a7"/>
+      <stop offset="1" stop-color="#00b39f"/>
+    </linearGradient>
+  </defs>
+  <rect width="640" height="220" rx="14" fill="url(#bg)"/>
+  <rect x="0" y="0" width="8" height="220" fill="url(#teal)"/>
+  <!-- hexagon mark -->
+  <g transform="translate(96 110)">
+    <polygon points="0,-46 40,-23 40,23 0,46 -40,23 -40,-23" fill="none" stroke="url(#teal)" stroke-width="6"/>
+    <polygon points="0,-22 19,-11 19,11 0,22 -19,11 -19,-11" fill="url(#teal)" opacity="0.9"/>
+  </g>
+  <text x="170" y="96" font-family="Helvetica, Arial, sans-serif" font-size="40" font-weight="700" fill="#ffffff">TCS Labs Academy</text>
+  <text x="172" y="132" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#9fe8da">AI-Native Cloud Infrastructure with Meshery</text>
+  <text x="172" y="170" font-family="Helvetica, Arial, sans-serif" font-size="15" fill="#7fb6c4">LLMs &amp; coding agents for cloud native operations</text>
+</svg>
